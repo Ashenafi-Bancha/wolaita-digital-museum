@@ -2,6 +2,8 @@ import React, { useState, useRef, useEffect } from 'react';
 import { Globe, Check } from 'lucide-react';
 import { motion, AnimatePresence } from 'motion/react';
 import { useLanguage } from '../../context/LanguageContext';
+import { WOLAITA_TRANSLATION_READY } from '../../config/site';
+import WolaitaComingSoonDialog from './WolaitaComingSoonDialog';
 
 type LangCode = 'en' | 'wo' | 'am';
 
@@ -44,7 +46,17 @@ const LANGUAGES: LangOption[] = [
 const LanguageSelector = () => {
   const { language, setLanguage } = useLanguage();
   const [isOpen, setIsOpen] = useState(false);
+  const [showWolaitaNotice, setShowWolaitaNotice] = useState(false);
   const ref = useRef<HTMLDivElement>(null);
+
+  const chooseLanguage = (code: LangCode) => {
+    setIsOpen(false);
+    if (code === 'wo' && !WOLAITA_TRANSLATION_READY) {
+      setShowWolaitaNotice(true);
+      return;
+    }
+    setLanguage(code);
+  };
 
   const current = LANGUAGES.find(l => l.code === language) || LANGUAGES[0];
 
@@ -109,10 +121,11 @@ const LanguageSelector = () => {
             <div className="p-2">
               {LANGUAGES.map((lang) => {
                 const isActive = language === lang.code;
+                const comingSoon = lang.code === 'wo' && !WOLAITA_TRANSLATION_READY;
                 return (
                   <button
                     key={lang.code}
-                    onClick={() => { setLanguage(lang.code); setIsOpen(false); }}
+                    onClick={() => chooseLanguage(lang.code)}
                     className={`w-full flex items-center gap-3 px-3 py-3 rounded-xl text-left transition-all duration-150 mb-1 last:mb-0 group/item ${
                       isActive
                         ? 'bg-amber-50 dark:bg-amber-900/20'
@@ -129,6 +142,11 @@ const LanguageSelector = () => {
                           {lang.native}
                         </span>
                         <span className="text-xs font-bold text-stone-400 uppercase tracking-wider">{lang.label}</span>
+                        {comingSoon && (
+                          <span className="rounded-full bg-yellow-400/20 px-2 py-0.5 text-[0.6rem] font-bold uppercase tracking-wider text-yellow-700 dark:text-yellow-400">
+                            Coming soon
+                          </span>
+                        )}
                       </div>
                       <div className={`text-xs mt-0.5 font-medium italic ${isActive ? lang.accent : 'text-stone-400 dark:text-stone-500'}`}>
                         "{lang.greeting}"
@@ -164,6 +182,15 @@ const LanguageSelector = () => {
           </motion.div>
         )}
       </AnimatePresence>
+
+      <WolaitaComingSoonDialog
+        open={showWolaitaNotice}
+        onOpenChange={setShowWolaitaNotice}
+        onChooseLanguage={(code) => {
+          setLanguage(code);
+          setShowWolaitaNotice(false);
+        }}
+      />
     </div>
   );
 };

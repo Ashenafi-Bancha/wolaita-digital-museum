@@ -1,4 +1,5 @@
 import React, { createContext, useContext, useState, useEffect, ReactNode } from 'react';
+import { WOLAITA_TRANSLATION_READY } from '../config/site';
 
 type Language = 'en' | 'wo' | 'am';
 
@@ -22,8 +23,10 @@ interface LanguageProviderProps {
 
 export const LanguageProvider: React.FC<LanguageProviderProps> = ({ children }) => {
   const [language, setLanguageState] = useState<Language>(() => {
-    const saved = localStorage.getItem('wolaita-language');
-    return (saved as Language) || 'en';
+    const saved = localStorage.getItem('wolaita-language') as Language | null;
+    // Visitors who picked Wolaitigna earlier fall back to English until it is ready.
+    if (saved === 'wo' && !WOLAITA_TRANSLATION_READY) return 'en';
+    return saved || 'en';
   });
 
   useEffect(() => {
