@@ -251,7 +251,7 @@ const NotablePeople = () => {
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="bg-white dark:bg-stone-800 rounded-2xl shadow-2xl p-8 md:p-12 text-center"
+            className="bg-white dark:bg-stone-800 rounded-2xl shadow-2xl p-5 sm:p-8 md:p-12 text-center"
           >
             <Star className="mx-auto mb-6 text-yellow-600 dark:text-yellow-400" size={64} />
             <h2 className="text-3xl md:text-4xl font-serif font-bold text-stone-900 dark:text-stone-100 mb-6">

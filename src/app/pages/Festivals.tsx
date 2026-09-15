@@ -38,7 +38,7 @@ const Festivals = () => {
                   className="w-full h-full object-cover"
                 />
               </div>
-              <div className="p-8 md:w-1/2 flex flex-col justify-center">
+              <div className="p-5 sm:p-8 md:w-1/2 flex flex-col justify-center">
                 <h2 className="text-3xl font-serif font-bold text-orange-700 dark:text-orange-400 mb-4">Gifata (New Year)</h2>
                 <p className="text-stone-700 dark:text-stone-300 leading-relaxed mb-4">
                   Gifata is the most significant festival in Wolaita, marking the New Year. It is a time of reconciliation, forgiveness, and renewal of bonds.
@@ -64,7 +64,7 @@ const Festivals = () => {
                   className="w-full h-full object-cover"
                 />
               </div>
-              <div className="p-8 md:w-1/2 flex flex-col justify-center">
+              <div className="p-5 sm:p-8 md:w-1/2 flex flex-col justify-center">
                 <h2 className="text-3xl font-serif font-bold text-orange-700 dark:text-orange-400 mb-4">Meskel</h2>
                 <p className="text-stone-700 dark:text-stone-300 leading-relaxed mb-4">
                   While celebrated across Ethiopia, Meskel has unique attributes in Wolaita. It commemorates the finding of the True Cross and coincides with the blooming of the yellow Adey Abeba flower.

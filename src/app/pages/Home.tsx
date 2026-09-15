@@ -108,7 +108,7 @@ const Home = () => {
       </Helmet>
 
       {/* Hero */}
-      <section className="relative isolate flex min-h-[92vh] flex-col items-center justify-center overflow-hidden bg-stone-950">
+      <section className="relative isolate flex min-h-[92svh] flex-col items-center justify-center overflow-hidden bg-stone-950">
         <div className="absolute inset-0">
           <img fetchpriority="high"
             src={mountDamotaImage}
@@ -121,22 +121,22 @@ const Home = () => {
           <div className="absolute inset-x-0 top-0 h-28 bg-gradient-to-b from-stone-950/80 to-transparent" />
         </div>
 
-        <div className="relative z-10 mx-auto max-w-4xl px-4 pb-20 pt-32 text-center sm:px-6 lg:pb-24 lg:pt-36">
+        <div className="relative z-10 mx-auto max-w-4xl px-4 pb-16 pt-24 text-center sm:px-6 sm:pb-20 sm:pt-32 lg:pb-24 lg:pt-36">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7, ease: "easeOut" }}
           >
-            <div className="badge-wolaita mx-auto mb-8">
+            <div className="badge-wolaita mx-auto mb-6 sm:mb-8">
               <MapPin size={14} className="shrink-0 text-[rgb(var(--wolaita-gold))]" />
               <span>{t("home.heroLocation")}</span>
             </div>
 
-            <h1 className="mx-auto max-w-4xl font-serif text-4xl font-black leading-[1.05] text-white sm:text-5xl lg:text-6xl xl:text-7xl">
+            <h1 className="mx-auto max-w-4xl font-serif text-3xl font-black leading-[1.05] text-white sm:text-5xl lg:text-6xl xl:text-7xl">
               <span className="block wolaita-display-gradient wolaita-hero-premium">
                 {t("home.museumTitle")}
               </span>
-              <span className="mt-4 block text-2xl font-bold uppercase tracking-[0.18em] text-white/75 sm:text-3xl lg:text-4xl">
+              <span className="mt-3 block text-lg font-bold uppercase tracking-[0.14em] text-white/75 sm:mt-4 sm:text-3xl sm:tracking-[0.18em] lg:text-4xl">
                 {t("home.visitLandOf")}
               </span>
             </h1>
@@ -150,7 +150,7 @@ const Home = () => {
               {t("home.subtitle")}
             </motion.p>
 
-            <div className="mt-10 flex flex-col items-center justify-center gap-3 sm:flex-row">
+            <div className="mt-8 flex flex-col items-center justify-center gap-3 sm:mt-10 sm:flex-row">
               <Link to="/history" className="btn-wolaita-primary group w-full sm:w-auto">
                 {t("home.cta")}
                 <ArrowRight size={18} className="transition-transform group-hover:translate-x-1" />
@@ -164,12 +164,12 @@ const Home = () => {
               {stats.map((stat) => (
                 <div
                   key={stat.labelKey}
-                  className="border-r border-white/10 px-4 py-5 last:border-r-0"
+                  className="border-r border-white/10 px-2 py-4 last:border-r-0 sm:px-4 sm:py-5"
                 >
                   <div className="font-serif text-2xl font-black text-[rgb(var(--wolaita-gold))] sm:text-3xl">
                     {stat.value}
                   </div>
-                  <div className="mt-1 text-[0.68rem] font-bold uppercase tracking-wider text-white/55">
+                  <div className="mt-1 text-xs font-bold uppercase leading-tight tracking-wide text-white/60 sm:tracking-wider">
                     {t(stat.labelKey)}
                   </div>
                 </div>
@@ -195,7 +195,7 @@ const Home = () => {
       </section>
 
       {/* Proverb */}
-      <section className="relative overflow-hidden bg-stone-950 py-16 px-6">
+      <section className="relative overflow-hidden bg-stone-950 py-16 px-4 sm:px-6">
         <div className="mx-auto max-w-5xl">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -234,15 +234,15 @@ const Home = () => {
       </section>
 
       {/* Gifaataa & Dingguza */}
-      <section className="relative overflow-hidden bg-gradient-to-b from-stone-950 via-stone-950 to-stone-900 py-24 px-6">
+      <section className="relative overflow-hidden bg-gradient-to-b from-stone-950 via-stone-950 to-stone-900 py-16 md:py-24 px-4 sm:px-6">
         <div className="relative z-10 mx-auto max-w-6xl">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="mb-16 text-center"
+            className="mb-10 md:mb-16 text-center"
           >
-            <h2 className="mb-4 font-serif text-4xl font-bold text-white md:text-5xl">
+            <h2 className="mb-4 font-serif text-3xl font-bold text-white md:text-5xl sm:text-4xl">
               {t("home.prideTitle")}
             </h2>
             <p className="mx-auto max-w-2xl text-lg text-white/65">{t("home.prideSubtitle")}</p>
@@ -256,7 +256,7 @@ const Home = () => {
               className="group"
             >
               <Link to="/gifaataa" className="block h-full">
-                <div className="pillar-card pillar-card-gifaataa h-full p-8 md:p-10">
+                <div className="pillar-card pillar-card-gifaataa h-full p-5 sm:p-8 md:p-10">
                   <div className="pillar-card-glow" aria-hidden="true" />
                   <div className="relative z-10">
                     <div className="card-accent-bar mb-6" />
@@ -291,7 +291,7 @@ const Home = () => {
               className="group"
             >
               <Link to="/dingguza" className="block h-full">
-                <div className="pillar-card pillar-card-dingguza h-full p-8 md:p-10">
+                <div className="pillar-card pillar-card-dingguza h-full p-5 sm:p-8 md:p-10">
                   <div className="pillar-card-glow" aria-hidden="true" />
                   <div className="relative z-10">
                     <div className="card-accent-bar mb-6" />
@@ -341,7 +341,7 @@ const Home = () => {
       </section>
 
       {/* Civilization highlights */}
-      <section className="bg-stone-50 py-24 px-6 dark:bg-stone-950">
+      <section className="bg-stone-50 py-16 md:py-24 px-4 sm:px-6 dark:bg-stone-950">
         <div className="mx-auto max-w-6xl">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -402,7 +402,7 @@ const Home = () => {
       </section>
 
       {/* Explore grid */}
-      <section className="bg-stone-100 py-20 px-6 dark:bg-stone-900">
+      <section className="bg-stone-100 py-14 md:py-20 px-4 sm:px-6 dark:bg-stone-900">
         <div className="mx-auto max-w-5xl">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -440,7 +440,7 @@ const Home = () => {
       </section>
 
       {/* Final CTA */}
-      <section className="relative overflow-hidden bg-stone-950 py-20 px-6">
+      <section className="relative overflow-hidden bg-stone-950 py-14 md:py-20 px-4 sm:px-6">
         <div className="section-divider absolute left-0 right-0 top-0" />
         <div className="relative z-10 mx-auto max-w-3xl text-center">
           <motion.div
@@ -448,7 +448,7 @@ const Home = () => {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
           >
-            <h2 className="mb-4 font-serif text-4xl font-bold text-white md:text-5xl">
+            <h2 className="mb-4 font-serif text-3xl font-bold text-white md:text-5xl sm:text-4xl">
               {t("home.museumTitle")}
             </h2>
             <p className="mb-10 text-lg text-white/60">{t("home.finalCtaDesc")}</p>

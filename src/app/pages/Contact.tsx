@@ -24,7 +24,7 @@ const Contact = () => {
       />
 
       <Section>
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-16">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-16">
           <div className="space-y-8">
             <h2 className="text-2xl font-serif font-bold text-stone-900 dark:text-stone-100">Get in Touch</h2>
             <p className="text-stone-600 dark:text-stone-300 leading-relaxed">
@@ -71,7 +71,7 @@ const Contact = () => {
             </div>
           </div>
 
-          <div className="surface-3d hover-glow-slow p-8 rounded-2xl">
+          <div className="surface-3d hover-glow-slow p-5 sm:p-8 rounded-2xl">
             <h2 className="text-2xl font-serif font-bold text-stone-900 dark:text-stone-100 mb-6">Send a Message</h2>
             <ContactForm />
           </div>

@@ -19,7 +19,7 @@ const GalleryGrid: React.FC<GalleryGridProps> = ({ images }) => {
   return (
     <>
       <ResponsiveMasonry
-        columnsCountBreakPoints={{ 350: 1, 750: 2, 900: 3 }}
+        columnsCountBreakPoints={{ 0: 1, 480: 2, 900: 3 }}
       >
         <Masonry gutter="16px">
           {images.map((image, index) => (
@@ -41,7 +41,8 @@ const GalleryGrid: React.FC<GalleryGridProps> = ({ images }) => {
                 <ZoomIn className="text-white w-8 h-8 opacity-0 group-hover:opacity-100 transform translate-y-4 group-hover:translate-y-0 transition-all duration-300" />
               </div>
               {image.caption && (
-                <div className="absolute bottom-0 left-0 right-0 p-4 bg-gradient-to-t from-black/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                // Captions stay visible on touch screens, which have no hover.
+                <div className="absolute bottom-0 left-0 right-0 p-3 sm:p-4 bg-gradient-to-t from-black/80 to-transparent opacity-100 [@media(hover:hover)]:opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                   <p className="text-white text-sm font-medium">{image.caption}</p>
                 </div>
               )}

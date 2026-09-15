@@ -78,7 +78,7 @@ const WolaitaCalendar = () => {
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="text-center mb-16"
+            className="text-center mb-10 md:mb-16"
           >
             <h2 className="text-3xl md:text-5xl font-serif font-bold text-stone-900 dark:text-stone-100 mb-6">
               Timekeeping Through Ancestral Wisdom
@@ -116,7 +116,7 @@ const WolaitaCalendar = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: index * 0.1 }}
-              className="bg-gradient-to-br from-orange-50 to-yellow-50 dark:from-stone-900 dark:to-stone-700 p-8 rounded-xl shadow-lg text-center border-t-4 border-yellow-400"
+              className="bg-gradient-to-br from-orange-50 to-yellow-50 dark:from-stone-900 dark:to-stone-700 p-5 sm:p-8 rounded-xl shadow-lg text-center border-t-4 border-yellow-400"
             >
               <div className="text-red-600 dark:text-red-400 mb-4 flex justify-center">
                 {feature.icon}
@@ -245,7 +245,7 @@ const WolaitaCalendar = () => {
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="bg-white dark:bg-stone-800 rounded-2xl shadow-2xl p-8 md:p-12"
+            className="bg-white dark:bg-stone-800 rounded-2xl shadow-2xl p-5 sm:p-8 md:p-12"
           >
             <div className="flex items-center gap-4 mb-6">
               <div className="p-4 bg-gradient-to-br from-green-600 to-yellow-600 rounded-full">

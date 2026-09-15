@@ -144,7 +144,7 @@ const LifeCeremonies = () => {
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="text-center mb-16"
+          className="text-center mb-10 md:mb-16"
         >
           <Heart className="mx-auto mb-4 text-red-600 dark:text-red-400" size={64} />
           <h2 className="text-3xl md:text-5xl font-serif font-bold text-stone-900 dark:text-stone-100 mb-4">
@@ -156,7 +156,7 @@ const LifeCeremonies = () => {
         </motion.div>
 
         {/* Marriage Stages */}
-        <div className="max-w-4xl mx-auto mb-16">
+        <div className="max-w-4xl mx-auto mb-10 md:mb-16">
           <h3 className="text-2xl font-serif font-bold text-stone-900 dark:text-stone-100 mb-8 text-center">
             Stages of Wolaita Marriage
           </h3>
@@ -217,7 +217,7 @@ const LifeCeremonies = () => {
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="text-center mb-16"
+          className="text-center mb-10 md:mb-16"
         >
           <Users className="mx-auto mb-4 text-stone-700 dark:text-stone-300" size={64} />
           <h2 className="text-3xl md:text-5xl font-serif font-bold text-stone-900 dark:text-stone-100 mb-4">
@@ -229,7 +229,7 @@ const LifeCeremonies = () => {
         </motion.div>
 
         {/* Funeral Customs */}
-        <div className="max-w-6xl mx-auto mb-16">
+        <div className="max-w-6xl mx-auto mb-10 md:mb-16">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {funeralCustoms.map((custom, index) => (
               <motion.div
@@ -306,7 +306,7 @@ const LifeCeremonies = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: index * 0.15 }}
-              className="bg-white dark:bg-stone-800 p-8 rounded-2xl shadow-lg text-center"
+              className="bg-white dark:bg-stone-800 p-5 sm:p-8 rounded-2xl shadow-lg text-center"
             >
               <h3 className="text-xl font-serif font-bold text-stone-900 dark:text-stone-100 mb-4">
                 {belief.title}

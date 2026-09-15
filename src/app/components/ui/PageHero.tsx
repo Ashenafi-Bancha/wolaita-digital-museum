@@ -30,7 +30,9 @@ const PageHero: FC<PageHeroProps> = ({
   return (
     <section
       className={`relative isolate flex items-center justify-center overflow-hidden bg-stone-950 ${
-        compact ? 'min-h-[340px] py-24 md:py-28' : 'min-h-[420px] py-28 md:py-36'
+        compact
+          ? 'min-h-[260px] py-16 sm:min-h-[340px] sm:py-24 md:py-28'
+          : 'min-h-[300px] py-20 sm:min-h-[420px] sm:py-28 md:py-36'
       } ${className}`}
     >
       {image ? (
@@ -48,14 +50,14 @@ const PageHero: FC<PageHeroProps> = ({
 
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_0%,rgba(242,201,76,0.08),transparent_50%)]" aria-hidden="true" />
 
-      <div className="container relative z-10 mx-auto px-6 text-center">
+      <div className="container relative z-10 mx-auto px-4 text-center sm:px-6">
         <motion.div
           initial={{ opacity: 0, y: 24 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.75, ease: 'easeOut' }}
         >
           {badge && (
-            <div className="badge-wolaita mx-auto mb-6">
+            <div className="badge-wolaita mx-auto mb-4 sm:mb-6">
               <span>{badge}</span>
             </div>
           )}
@@ -63,7 +65,7 @@ const PageHero: FC<PageHeroProps> = ({
           {icon && <div className="mb-6 flex justify-center text-[rgb(var(--wolaita-gold))]">{icon}</div>}
 
           <h1
-            className={`mx-auto max-w-4xl font-serif text-4xl font-black leading-tight sm:text-5xl md:text-6xl ${
+            className={`mx-auto max-w-4xl font-serif text-3xl font-black leading-tight sm:text-5xl md:text-6xl ${
               titleClassName || 'wolaita-display-gradient wolaita-hero-premium'
             }`}
           >
@@ -75,7 +77,7 @@ const PageHero: FC<PageHeroProps> = ({
               initial={{ opacity: 0, y: 12 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.75, delay: 0.15 }}
-              className="mx-auto mt-6 max-w-2xl text-base leading-relaxed text-white/75 sm:text-lg md:text-xl"
+              className="mx-auto mt-4 max-w-2xl text-base leading-relaxed text-white/75 sm:mt-6 sm:text-lg md:text-xl"
             >
               {subtitle}
             </motion.p>

@@ -169,7 +169,7 @@ const Accommodation = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: index * 0.1 }}
-              className="bg-white dark:bg-stone-800 p-8 rounded-xl shadow-lg text-center border-t-4 border-yellow-400"
+              className="bg-white dark:bg-stone-800 p-5 sm:p-8 rounded-xl shadow-lg text-center border-t-4 border-yellow-400"
             >
               <div className="text-red-600 dark:text-red-400 mb-4 flex justify-center">
                 {type.icon}
@@ -313,7 +313,7 @@ const Accommodation = () => {
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="bg-gradient-to-br from-orange-900 to-red-900 text-white rounded-2xl shadow-2xl p-8 md:p-12 text-center"
+            className="bg-gradient-to-br from-orange-900 to-red-900 text-white rounded-2xl shadow-2xl p-5 sm:p-8 md:p-12 text-center"
           >
             <Coffee className="mx-auto mb-6" size={64} />
             <h2 className="text-3xl md:text-4xl font-serif font-bold mb-6">

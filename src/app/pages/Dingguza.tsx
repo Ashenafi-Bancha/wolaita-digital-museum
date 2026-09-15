@@ -112,7 +112,7 @@ const Dingguza = () => {
       </Helmet>
 
       {/* Hero Section - Ultra Special */}
-      <div className="relative bg-gradient-to-br from-black via-stone-900 to-black py-32 overflow-hidden">
+      <div className="relative bg-gradient-to-br from-black via-stone-900 to-black py-20 md:py-32 overflow-hidden">
         {/* Animated stripes in background */}
         <div className="absolute inset-0 overflow-hidden opacity-20">
           <motion.div
@@ -158,10 +158,10 @@ const Dingguza = () => {
               <Shirt className="mx-auto mb-6 text-yellow-400" size={80} />
             </motion.div>
 
-            <h1 className="text-5xl md:text-7xl lg:text-8xl font-serif font-bold text-white mb-6 drop-shadow-2xl">
+            <h1 className="text-4xl md:text-7xl lg:text-8xl font-serif font-bold text-white mb-6 drop-shadow-2xl sm:text-5xl">
               {t('dingguza.title')}
             </h1>
-            <div className="inline-block bg-white/20 backdrop-blur-md rounded-full px-8 py-4 mb-6">
+            <div className="inline-block bg-white/20 backdrop-blur-md rounded-full px-5 sm:px-8 py-4 mb-6">
               <p className="text-2xl md:text-4xl text-yellow-100 font-serif italic">
                 {t('dingguza.subtitle')}
               </p>
@@ -174,19 +174,19 @@ const Dingguza = () => {
             <div className="flex flex-wrap justify-center gap-4 mt-12">
               <motion.div
                 whileHover={{ scale: 1.1 }}
-                className="bg-black text-white px-8 py-4 rounded-full font-bold shadow-2xl border-4 border-white"
+                className="bg-black text-white px-5 sm:px-8 py-4 rounded-full font-bold shadow-2xl border-4 border-white"
               >
                 BLACK
               </motion.div>
               <motion.div
                 whileHover={{ scale: 1.1 }}
-                className="bg-yellow-400 text-black px-8 py-4 rounded-full font-bold shadow-2xl border-4 border-white"
+                className="bg-yellow-400 text-black px-5 sm:px-8 py-4 rounded-full font-bold shadow-2xl border-4 border-white"
               >
                 YELLOW
               </motion.div>
               <motion.div
                 whileHover={{ scale: 1.1 }}
-                className="bg-red-600 text-white px-8 py-4 rounded-full font-bold shadow-2xl border-4 border-white"
+                className="bg-red-600 text-white px-5 sm:px-8 py-4 rounded-full font-bold shadow-2xl border-4 border-white"
               >
                 RED
               </motion.div>
@@ -202,9 +202,9 @@ const Dingguza = () => {
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="text-center mb-16"
+            className="text-center mb-10 md:mb-16"
           >
-            <h2 className="text-4xl md:text-6xl font-serif font-bold text-stone-900 dark:text-stone-100 mb-6">
+            <h2 className="text-3xl md:text-6xl font-serif font-bold text-stone-900 dark:text-stone-100 mb-6 sm:text-4xl">
               What is Dingguza?
             </h2>
             <div className="prose prose-lg max-w-none text-stone-700 dark:text-stone-300 space-y-6">
@@ -228,9 +228,9 @@ const Dingguza = () => {
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="text-center mb-16"
+          className="text-center mb-10 md:mb-16"
         >
-          <h2 className="text-4xl md:text-6xl font-serif font-bold text-stone-900 dark:text-stone-100 mb-4">
+          <h2 className="text-3xl md:text-6xl font-serif font-bold text-stone-900 dark:text-stone-100 mb-4 sm:text-4xl">
             The Three Sacred Colors
           </h2>
           <p className="text-stone-600 dark:text-stone-300 text-lg max-w-3xl mx-auto">
@@ -238,7 +238,7 @@ const Dingguza = () => {
           </p>
         </motion.div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto mb-16">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto mb-10 md:mb-16">
           {colors.map((color, index) => (
             <motion.div
               key={index}
@@ -246,7 +246,7 @@ const Dingguza = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: index * 0.2 }}
-              className={`relative bg-white dark:bg-stone-800 p-8 rounded-2xl shadow-2xl overflow-hidden group hover:shadow-3xl transition-all border-t-8 ${
+              className={`relative bg-white dark:bg-stone-800 p-5 sm:p-8 rounded-2xl shadow-2xl overflow-hidden group hover:shadow-3xl transition-all border-t-8 ${
                 color.name === "Black" ? "border-black" :
                 color.name === "Yellow (Gold)" ? "border-yellow-400" :
                 "border-red-600"
@@ -293,9 +293,9 @@ const Dingguza = () => {
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="text-center mb-16"
+          className="text-center mb-10 md:mb-16"
         >
-          <h2 className="text-4xl md:text-6xl font-serif font-bold text-stone-900 dark:text-stone-100 mb-4">
+          <h2 className="text-3xl md:text-6xl font-serif font-bold text-stone-900 dark:text-stone-100 mb-4 sm:text-4xl">
             Cultural Significance
           </h2>
         </motion.div>
@@ -309,7 +309,7 @@ const Dingguza = () => {
               viewport={{ once: true }}
               transition={{ delay: index * 0.15 }}
               whileHover={{ scale: 1.05 }}
-              className="bg-white dark:bg-stone-800 p-10 rounded-2xl shadow-xl text-center relative overflow-hidden group"
+              className="bg-white dark:bg-stone-800 p-6 sm:p-10 rounded-2xl shadow-xl text-center relative overflow-hidden group"
             >
               {/* Gradient background on hover */}
               <div className={`absolute inset-0 bg-gradient-to-br ${item.color} opacity-0 group-hover:opacity-10 transition-opacity`}></div>
@@ -336,9 +336,9 @@ const Dingguza = () => {
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="text-center mb-16"
+          className="text-center mb-10 md:mb-16"
         >
-          <h2 className="text-4xl md:text-6xl font-serif font-bold text-stone-900 dark:text-stone-100 mb-4">
+          <h2 className="text-3xl md:text-6xl font-serif font-bold text-stone-900 dark:text-stone-100 mb-4 sm:text-4xl">
             When to Wear Dingguza
           </h2>
           <p className="text-stone-600 dark:text-stone-300 text-lg max-w-3xl mx-auto">
@@ -380,7 +380,7 @@ const Dingguza = () => {
           viewport={{ once: true }}
           className="text-center mb-12"
         >
-          <h2 className="text-4xl md:text-6xl font-serif font-bold text-stone-900 dark:text-stone-100 mb-4">
+          <h2 className="text-3xl md:text-6xl font-serif font-bold text-stone-900 dark:text-stone-100 mb-4 sm:text-4xl">
             Styles & Variations
           </h2>
           <p className="text-stone-600 dark:text-stone-300 text-lg max-w-3xl mx-auto">
@@ -416,9 +416,9 @@ const Dingguza = () => {
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="text-center mb-16"
+          className="text-center mb-10 md:mb-16"
         >
-          <h2 className="text-4xl md:text-6xl font-serif font-bold text-stone-900 dark:text-stone-100 mb-4">
+          <h2 className="text-3xl md:text-6xl font-serif font-bold text-stone-900 dark:text-stone-100 mb-4 sm:text-4xl">
             Dingguza in Action
           </h2>
           <p className="text-stone-600 dark:text-stone-300 text-lg max-w-3xl mx-auto">
@@ -438,9 +438,9 @@ const Dingguza = () => {
             <img loading="lazy" decoding="async" 
               src={dingguza1} 
               alt="Woman in traditional Dingguza dress" 
-              className="w-full h-[500px] object-cover group-hover:scale-110 transition-transform duration-500"
+              className="w-full h-80 sm:h-96 md:h-[500px] object-cover group-hover:scale-110 transition-transform duration-500"
             />
-            <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent flex items-end p-8">
+            <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent flex items-end p-5 sm:p-8">
               <div>
                 <h3 className="text-2xl font-serif font-bold text-white mb-2">Traditional Elegance</h3>
                 <p className="text-stone-200">Dingguza worn as a complete traditional dress, showcasing the beautiful black, yellow, and red stripes.</p>
@@ -459,9 +459,9 @@ const Dingguza = () => {
             <img loading="lazy" decoding="async" 
               src={dingguza2} 
               alt="Woman wearing Dingguza as a shawl" 
-              className="w-full h-[500px] object-cover group-hover:scale-110 transition-transform duration-500"
+              className="w-full h-80 sm:h-96 md:h-[500px] object-cover group-hover:scale-110 transition-transform duration-500"
             />
-            <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent flex items-end p-8">
+            <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent flex items-end p-5 sm:p-8">
               <div>
                 <h3 className="text-2xl font-serif font-bold text-white mb-2">Shawl Style</h3>
                 <p className="text-stone-200">Dingguza draped as a shawl over white traditional clothing, a popular style for cultural events.</p>
@@ -480,9 +480,9 @@ const Dingguza = () => {
             <img loading="lazy" decoding="async" 
               src={dingguza3} 
               alt="Close-up portrait in Dingguza attire" 
-              className="w-full h-[500px] object-cover group-hover:scale-110 transition-transform duration-500"
+              className="w-full h-80 sm:h-96 md:h-[500px] object-cover group-hover:scale-110 transition-transform duration-500"
             />
-            <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent flex items-end p-8">
+            <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent flex items-end p-5 sm:p-8">
               <div>
                 <h3 className="text-2xl font-serif font-bold text-white mb-2">Contemporary Fashion</h3>
                 <p className="text-stone-200">Modern styling with Dingguza patterns, including matching headwrap for a complete cultural look.</p>
@@ -501,9 +501,9 @@ const Dingguza = () => {
             <img loading="lazy" decoding="async" 
               src={dingguza4} 
               alt="Community in traditional Dingguza" 
-              className="w-full h-[500px] object-cover group-hover:scale-110 transition-transform duration-500"
+              className="w-full h-80 sm:h-96 md:h-[500px] object-cover group-hover:scale-110 transition-transform duration-500"
             />
-            <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent flex items-end p-8">
+            <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent flex items-end p-5 sm:p-8">
               <div>
                 <h3 className="text-2xl font-serif font-bold text-white mb-2">Community Celebration</h3>
                 <p className="text-stone-200">Wolaita community gathered in their traditional Dingguza, celebrating unity and cultural heritage together.</p>
@@ -520,7 +520,7 @@ const Dingguza = () => {
           className="text-center"
         >
           <div className="inline-block bg-gradient-to-r from-black via-yellow-400 to-red-600 p-1 rounded-2xl">
-            <div className="bg-white dark:bg-stone-900 px-8 py-6 rounded-2xl">
+            <div className="bg-white dark:bg-stone-900 px-5 sm:px-8 py-6 rounded-2xl">
               <p className="text-xl font-serif text-stone-900 dark:text-stone-100">
                 <strong className="text-yellow-600 dark:text-yellow-400">Dingguza</strong> — More than clothing, it's a statement of identity, pride, and heritage.
               </p>
@@ -539,7 +539,7 @@ const Dingguza = () => {
           >
             <Award className="mx-auto mb-8 text-yellow-400" size={80} />
 
-            <h2 className="text-4xl md:text-6xl font-serif font-bold mb-8">
+            <h2 className="text-3xl md:text-6xl font-serif font-bold mb-8 sm:text-4xl">
               A Global Cultural Icon
             </h2>
             <div className="space-y-6 text-lg md:text-xl leading-relaxed text-stone-200">

@@ -22,12 +22,12 @@ const IntangibleHeritage = () => {
       />
 
       <Section>
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12">
           <motion.div 
             initial={{ opacity: 0, x: -20 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
-            className="feature-card-3d p-8"
+            className="feature-card-3d p-5 sm:p-8"
           >
             <div className="flex items-center gap-4 mb-6">
               <div className="p-3 bg-orange-200 dark:bg-orange-900/40 rounded-full text-orange-800 dark:text-orange-400">
@@ -47,7 +47,7 @@ const IntangibleHeritage = () => {
             initial={{ opacity: 0, x: 20 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
-            className="p-8 bg-stone-100 dark:bg-stone-800 rounded-xl"
+            className="p-5 sm:p-8 bg-stone-100 dark:bg-stone-800 rounded-xl"
           >
             <div className="flex items-center gap-4 mb-6">
               <div className="p-3 bg-stone-200 dark:bg-stone-700 rounded-full text-stone-800 dark:text-stone-300">
@@ -67,7 +67,7 @@ const IntangibleHeritage = () => {
             initial={{ opacity: 0, x: -20 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
-            className="p-8 bg-stone-100 dark:bg-stone-800 rounded-xl"
+            className="p-5 sm:p-8 bg-stone-100 dark:bg-stone-800 rounded-xl"
           >
             <div className="flex items-center gap-4 mb-6">
               <div className="p-3 bg-stone-200 dark:bg-stone-700 rounded-full text-stone-800 dark:text-stone-300">
@@ -87,7 +87,7 @@ const IntangibleHeritage = () => {
             initial={{ opacity: 0, x: 20 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
-            className="feature-card-3d p-8"
+            className="feature-card-3d p-5 sm:p-8"
           >
             <div className="flex items-center gap-4 mb-6">
               <div className="p-3 bg-orange-200 dark:bg-orange-900/40 rounded-full text-orange-800 dark:text-orange-400">

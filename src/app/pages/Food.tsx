@@ -194,10 +194,10 @@ const Food = () => {
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="text-center mb-16"
+          className="text-center mb-10 md:mb-16"
         >
           <ChefHat className="mx-auto mb-4 text-orange-600 dark:text-orange-400" size={64} />
-          <h2 className="text-4xl md:text-6xl font-serif font-bold text-stone-900 dark:text-stone-100 mb-4">
+          <h2 className="text-3xl md:text-6xl font-serif font-bold text-stone-900 dark:text-stone-100 mb-4 sm:text-4xl">
             Authentic Wolaita Cuisine
           </h2>
           <p className="text-stone-600 dark:text-stone-300 text-lg max-w-3xl mx-auto">
@@ -217,7 +217,7 @@ const Food = () => {
             <img loading="lazy" decoding="async" 
               src={foodPlatter1} 
               alt="Traditional Wolaita food platter with colorful dishes on decorative basket" 
-              className="w-full h-[450px] object-cover group-hover:scale-110 transition-transform duration-500"
+              className="w-full h-72 sm:h-96 md:h-[450px] object-cover group-hover:scale-110 transition-transform duration-500"
             />
             <div className="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent flex items-end p-6">
               <div>
@@ -243,7 +243,7 @@ const Food = () => {
             <img loading="lazy" decoding="async" 
               src={foodPlatter2} 
               alt="Kocho with various traditional sauces and accompaniments" 
-              className="w-full h-[450px] object-cover group-hover:scale-110 transition-transform duration-500"
+              className="w-full h-72 sm:h-96 md:h-[450px] object-cover group-hover:scale-110 transition-transform duration-500"
             />
             <div className="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent flex items-end p-6">
               <div>
@@ -269,7 +269,7 @@ const Food = () => {
             <img loading="lazy" decoding="async" 
               src={foodPlatter3} 
               alt="Kocho pieces with green and red traditional sauces" 
-              className="w-full h-[450px] object-cover group-hover:scale-110 transition-transform duration-500"
+              className="w-full h-72 sm:h-96 md:h-[450px] object-cover group-hover:scale-110 transition-transform duration-500"
             />
             <div className="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent flex items-end p-6">
               <div>
@@ -295,7 +295,7 @@ const Food = () => {
             transition={{ delay: 0.1 }}
             className="bg-gradient-to-br from-green-50 to-yellow-50 dark:from-stone-800 dark:to-stone-700 p-6 rounded-xl shadow-lg text-center border-t-4 border-green-600"
           >
-            <div className="text-5xl mb-3">🌿</div>
+            <div className="text-4xl mb-3 sm:text-5xl">🌿</div>
             <h3 className="text-xl font-serif font-bold text-stone-900 dark:text-stone-100 mb-2">
               Enset-Based
             </h3>
@@ -311,7 +311,7 @@ const Food = () => {
             transition={{ delay: 0.2 }}
             className="bg-gradient-to-br from-orange-50 to-red-50 dark:from-stone-800 dark:to-stone-700 p-6 rounded-xl shadow-lg text-center border-t-4 border-orange-600"
           >
-            <div className="text-5xl mb-3">🎨</div>
+            <div className="text-4xl mb-3 sm:text-5xl">🎨</div>
             <h3 className="text-xl font-serif font-bold text-stone-900 dark:text-stone-100 mb-2">
               Colorful Sauces
             </h3>
@@ -327,7 +327,7 @@ const Food = () => {
             transition={{ delay: 0.3 }}
             className="bg-gradient-to-br from-yellow-50 to-orange-50 dark:from-stone-800 dark:to-stone-700 p-6 rounded-xl shadow-lg text-center border-t-4 border-yellow-400"
           >
-            <div className="text-5xl mb-3">👥</div>
+            <div className="text-4xl mb-3 sm:text-5xl">👥</div>
             <h3 className="text-xl font-serif font-bold text-stone-900 dark:text-stone-100 mb-2">
               Communal Sharing
             </h3>
@@ -344,7 +344,7 @@ const Food = () => {
           viewport={{ once: true }}
           className="max-w-5xl mx-auto mt-16"
         >
-          <div className="bg-gradient-to-br from-orange-50 to-yellow-50 dark:from-stone-800 dark:to-stone-700 p-8 md:p-12 rounded-2xl shadow-2xl border-l-8 border-red-600">
+          <div className="bg-gradient-to-br from-orange-50 to-yellow-50 dark:from-stone-800 dark:to-stone-700 p-5 sm:p-8 md:p-12 rounded-2xl shadow-2xl border-l-8 border-red-600">
             <h3 className="text-2xl md:text-3xl font-serif font-bold text-stone-900 dark:text-stone-100 mb-6 text-center">
               The Art of Wolaita Food Presentation
             </h3>
@@ -373,7 +373,7 @@ const Food = () => {
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="bg-white dark:bg-stone-800 rounded-2xl shadow-2xl p-8 md:p-12"
+            className="bg-white dark:bg-stone-800 rounded-2xl shadow-2xl p-5 sm:p-8 md:p-12"
           >
             <div className="flex items-center gap-4 mb-6">
               <div className="p-4 bg-red-600 rounded-full">

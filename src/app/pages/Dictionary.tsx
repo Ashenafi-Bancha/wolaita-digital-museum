@@ -145,7 +145,7 @@ const Dictionary = () => {
       </Helmet>
 
       {/* Hero Section */}
-      <div className="relative bg-gradient-to-br from-green-50 via-blue-50 to-teal-50 dark:from-stone-900 dark:via-stone-800 dark:to-stone-900 py-24 text-center">
+      <div className="relative bg-gradient-to-br from-green-50 via-blue-50 to-teal-50 dark:from-stone-900 dark:via-stone-800 dark:to-stone-900 py-16 md:py-24 text-center">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
@@ -164,7 +164,7 @@ const Dictionary = () => {
           </motion.div>
 
           <Book className="mx-auto mb-6 text-green-600 dark:text-green-400" size={48} />
-          <h1 className="text-4xl md:text-6xl font-serif font-bold text-stone-900 dark:text-stone-100 mb-6">
+          <h1 className="text-3xl md:text-6xl font-serif font-bold text-stone-900 dark:text-stone-100 mb-6 sm:text-4xl">
             {t('dictionary.title')}
           </h1>
           <p className="max-w-3xl mx-auto text-xl text-stone-700 dark:text-stone-300 px-4">
@@ -276,7 +276,7 @@ const Dictionary = () => {
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="bg-white dark:bg-stone-800 rounded-2xl shadow-2xl p-8 md:p-12"
+            className="bg-white dark:bg-stone-800 rounded-2xl shadow-2xl p-5 sm:p-8 md:p-12"
           >
             <div className="flex items-center gap-4 mb-6">
               <div className="p-4 bg-green-600 rounded-full">

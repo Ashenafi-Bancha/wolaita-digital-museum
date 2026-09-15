@@ -158,7 +158,7 @@ const Kings = () => {
       </Helmet>
 
       {/* Hero Section with Golden King Statue as Background */}
-      <div className="relative overflow-hidden min-h-[600px] md:min-h-[700px]">
+      <div className="relative overflow-hidden min-h-[520px] sm:min-h-[600px] md:min-h-[700px]">
         {/* Golden King Statue Background Image - Clearly Visible */}
         <div 
           className="absolute inset-0 bg-cover bg-center bg-no-repeat"
@@ -166,7 +166,7 @@ const Kings = () => {
         >
         </div>
 
-        <div className="container mx-auto px-6 py-20 md:py-32 relative z-10">
+        <div className="container mx-auto px-4 sm:px-6 py-20 md:py-32 relative z-10">
           <div className="max-w-4xl mx-auto text-center">
             {/* Flag accent */}
             <motion.div
@@ -186,7 +186,7 @@ const Kings = () => {
               transition={{ duration: 0.8 }}
             >
               <Crown className="mx-auto mb-6 text-yellow-400 drop-shadow-[0_0_20px_rgba(0,0,0,0.9)]" size={64} />
-              <h1 className="text-5xl md:text-7xl lg:text-8xl font-serif font-bold text-white mb-8 leading-tight" style={{ textShadow: '0 4px 30px rgba(0,0,0,0.9), 0 2px 10px rgba(0,0,0,0.8)' }}>
+              <h1 className="text-4xl md:text-7xl lg:text-8xl font-serif font-bold text-white mb-8 leading-tight sm:text-5xl" style={{ textShadow: '0 4px 30px rgba(0,0,0,0.9), 0 2px 10px rgba(0,0,0,0.8)' }}>
                 {t('kings.title')}
               </h1>
               <p className="text-lg md:text-2xl text-yellow-100 leading-relaxed mb-10 max-w-3xl mx-auto" style={{ textShadow: '0 2px 20px rgba(0,0,0,0.9), 0 1px 8px rgba(0,0,0,0.8)' }}>
@@ -261,7 +261,7 @@ const Kings = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: index * 0.1 }}
-              className="bg-gradient-to-br from-yellow-50 to-orange-50 dark:from-stone-900 dark:to-stone-700 p-8 rounded-xl shadow-lg"
+              className="bg-gradient-to-br from-yellow-50 to-orange-50 dark:from-stone-900 dark:to-stone-700 p-5 sm:p-8 rounded-xl shadow-lg"
             >
               <div className="text-red-600 dark:text-red-400 mb-4">
                 {tradition.icon}
@@ -350,7 +350,7 @@ const Kings = () => {
                     )}
 
                     <button
-                      className="mt-4 text-orange-700 dark:text-orange-400 font-medium hover:underline"
+                      className="mt-2 min-h-11 py-2 text-orange-700 dark:text-orange-400 font-medium hover:underline"
                     >
                       {selectedKing === index ? 'Show less' : 'Read more about this king →'}
                     </button>

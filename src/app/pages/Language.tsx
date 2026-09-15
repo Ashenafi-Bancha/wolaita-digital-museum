@@ -58,7 +58,7 @@ const Language = () => {
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="text-center mb-16"
+          className="text-center mb-10 md:mb-16"
         >
           <h2 className="text-3xl md:text-5xl font-serif font-bold text-stone-900 dark:text-stone-100 mb-4">
             Language Characteristics
@@ -76,7 +76,7 @@ const Language = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: index * 0.1 }}
-              className="bg-white dark:bg-stone-800 p-8 rounded-xl shadow-lg border border-stone-200 dark:border-stone-700"
+              className="bg-white dark:bg-stone-800 p-5 sm:p-8 rounded-xl shadow-lg border border-stone-200 dark:border-stone-700"
             >
               <div className="text-yellow-600 dark:text-yellow-400 mb-4">
                 {feature.icon}
@@ -98,7 +98,7 @@ const Language = () => {
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="text-center mb-16"
+          className="text-center mb-10 md:mb-16"
         >
           <h2 className="text-3xl md:text-5xl font-serif font-bold text-stone-900 dark:text-stone-100 mb-4">
             Common Phrases
@@ -143,7 +143,7 @@ const Language = () => {
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="bg-white dark:bg-stone-800 rounded-2xl shadow-xl p-8 md:p-12 border-t-4 border-yellow-400"
+            className="bg-white dark:bg-stone-800 rounded-2xl shadow-xl p-5 sm:p-8 md:p-12 border-t-4 border-yellow-400"
           >
             <h2 className="text-3xl md:text-4xl font-serif font-bold text-stone-900 dark:text-stone-100 mb-6">
               Preserving Our Linguistic Heritage

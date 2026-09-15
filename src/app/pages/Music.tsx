@@ -137,7 +137,7 @@ const Music = () => {
 
       {/* Introduction */}
       <Section>
-        <div className="max-w-4xl mx-auto text-center mb-16">
+        <div className="max-w-4xl mx-auto text-center mb-10 md:mb-16">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -155,7 +155,7 @@ const Music = () => {
 
       {/* Music Categories */}
       <Section className="bg-stone-50 dark:bg-stone-800">
-        <div className="text-center mb-16">
+        <div className="text-center mb-10 md:mb-16">
           <h2 className="text-3xl md:text-4xl font-serif font-bold text-stone-900 dark:text-stone-100 mb-4">
             Categories of Wolaita Music
           </h2>
@@ -174,7 +174,7 @@ const Music = () => {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: index * 0.1 }}
-                className={`feature-card-3d p-8 border-t-4 ${colors.border}`}
+                className={`feature-card-3d p-5 sm:p-8 border-t-4 ${colors.border}`}
               >
                 <div className={`${colors.icon} mb-4`}>
                   {category.icon}
@@ -204,7 +204,7 @@ const Music = () => {
 
       {/* Traditional Instruments */}
       <Section>
-        <div className="text-center mb-16">
+        <div className="text-center mb-10 md:mb-16">
           <h2 className="text-3xl md:text-4xl font-serif font-bold text-stone-900 dark:text-stone-100 mb-4">
             Traditional Instruments
           </h2>
@@ -223,8 +223,8 @@ const Music = () => {
               transition={{ delay: index * 0.1 }}
               className="bg-stone-50 dark:bg-stone-800 rounded-lg p-6 border-l-4 border-orange-500 hover:shadow-lg transition-shadow"
             >
-              <div className="flex items-start gap-4">
-                <div className="text-orange-600 dark:text-orange-400">
+              <div className="flex flex-col gap-3 sm:flex-row sm:items-start sm:gap-4">
+                <div className="shrink-0 text-orange-600 dark:text-orange-400">
                   {instrument.icon}
                 </div>
                 <div>
@@ -272,7 +272,7 @@ const Music = () => {
 
       {/* Notable Musicians */}
       <Section className="bg-stone-50 dark:bg-stone-800">
-        <div className="text-center mb-16">
+        <div className="text-center mb-10 md:mb-16">
           <h2 className="text-3xl md:text-4xl font-serif font-bold text-stone-900 dark:text-stone-100 mb-4">
             Notable Musicians & Performers
           </h2>
@@ -289,7 +289,7 @@ const Music = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: index * 0.1 }}
-              className="feature-card-3d p-8 border-l-4 border-[rgb(var(--wolaita-gold))]"
+              className="feature-card-3d p-5 sm:p-8 border-l-4 border-[rgb(var(--wolaita-gold))]"
             >
               <div className="flex items-start gap-3 mb-4">
                 <Mic2 size={28} className="text-yellow-600 dark:text-yellow-400" />

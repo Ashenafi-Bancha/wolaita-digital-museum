@@ -29,7 +29,7 @@ const Tourism = () => {
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="feature-card-3d p-8 border-t-4 border-[rgb(var(--wolaita-gold))]"
+            className="feature-card-3d p-5 sm:p-8 border-t-4 border-[rgb(var(--wolaita-gold))]"
           >
             <MapPin size={40} className="text-orange-600 mb-4" />
             <h3 className="text-2xl font-serif font-bold text-stone-900 dark:text-stone-100 mb-3">Damota Mountain</h3>
@@ -43,7 +43,7 @@ const Tourism = () => {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ delay: 0.1 }}
-            className="feature-card-3d p-8 border-t-4 border-[rgb(var(--wolaita-gold))]"
+            className="feature-card-3d p-5 sm:p-8 border-t-4 border-[rgb(var(--wolaita-gold))]"
           >
             <Camera size={40} className="text-orange-600 mb-4" />
             <h3 className="text-2xl font-serif font-bold text-stone-900 dark:text-stone-100 mb-3">Ajora Falls</h3>
@@ -57,7 +57,7 @@ const Tourism = () => {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ delay: 0.2 }}
-            className="feature-card-3d p-8 border-t-4 border-[rgb(var(--wolaita-gold))]"
+            className="feature-card-3d p-5 sm:p-8 border-t-4 border-[rgb(var(--wolaita-gold))]"
           >
             <Tent size={40} className="text-orange-600 mb-4" />
             <h3 className="text-2xl font-serif font-bold text-stone-900 dark:text-stone-100 mb-3">Cultural Villages</h3>

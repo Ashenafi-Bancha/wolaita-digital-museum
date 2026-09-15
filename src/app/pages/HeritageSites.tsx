@@ -188,7 +188,7 @@ const HeritageSites = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: index * 0.1 }}
-              className="bg-gradient-to-br from-green-50 to-yellow-50 dark:from-stone-900 dark:to-stone-700 p-8 rounded-2xl shadow-lg border-l-4 border-green-600 hover:shadow-2xl transition-all"
+              className="bg-gradient-to-br from-green-50 to-yellow-50 dark:from-stone-900 dark:to-stone-700 p-5 sm:p-8 rounded-2xl shadow-lg border-l-4 border-green-600 hover:shadow-2xl transition-all"
             >
               <div className="flex items-start gap-4 mb-4">
                 <div className="p-3 bg-gradient-to-br from-green-600 to-yellow-600 rounded-lg text-white shadow-lg">
@@ -315,9 +315,9 @@ const HeritageSites = () => {
             <img loading="lazy" decoding="async" 
               src={traditionalHouse1} 
               alt="Traditional Wolaita Tukul house with thatched roof" 
-              className="w-full h-[500px] object-cover group-hover:scale-110 transition-transform duration-500"
+              className="w-full h-80 sm:h-96 md:h-[500px] object-cover group-hover:scale-110 transition-transform duration-500"
             />
-            <div className="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent flex items-end p-8">
+            <div className="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent flex items-end p-5 sm:p-8">
               <div>
                 <h3 className="text-2xl font-serif font-bold text-white mb-2">Traditional Tukul House</h3>
                 <p className="text-stone-200 leading-relaxed">
@@ -341,9 +341,9 @@ const HeritageSites = () => {
             <img loading="lazy" decoding="async" 
               src={traditionalHouse2} 
               alt="Traditional Wolaita house with wooden door entrance" 
-              className="w-full h-[500px] object-cover group-hover:scale-110 transition-transform duration-500"
+              className="w-full h-80 sm:h-96 md:h-[500px] object-cover group-hover:scale-110 transition-transform duration-500"
             />
-            <div className="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent flex items-end p-8">
+            <div className="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent flex items-end p-5 sm:p-8">
               <div>
                 <h3 className="text-2xl font-serif font-bold text-white mb-2">Sustainable Construction</h3>
                 <p className="text-stone-200 leading-relaxed">
@@ -365,7 +365,7 @@ const HeritageSites = () => {
           viewport={{ once: true }}
           className="max-w-5xl mx-auto mt-12"
         >
-          <div className="bg-gradient-to-br from-orange-50 to-yellow-50 dark:from-stone-800 dark:to-stone-700 p-8 rounded-2xl shadow-lg">
+          <div className="bg-gradient-to-br from-orange-50 to-yellow-50 dark:from-stone-800 dark:to-stone-700 p-5 sm:p-8 rounded-2xl shadow-lg">
             <h4 className="text-xl font-serif font-bold text-stone-900 dark:text-stone-100 mb-4 text-center">
               Why Traditional Houses Matter
             </h4>

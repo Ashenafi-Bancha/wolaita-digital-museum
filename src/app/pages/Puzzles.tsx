@@ -160,7 +160,7 @@ const Puzzles = () => {
       </Helmet>
 
       {/* Hero Section */}
-      <div className="relative bg-gradient-to-br from-purple-50 via-blue-50 to-indigo-50 dark:from-stone-900 dark:via-stone-800 dark:to-stone-900 py-24 text-center">
+      <div className="relative bg-gradient-to-br from-purple-50 via-blue-50 to-indigo-50 dark:from-stone-900 dark:via-stone-800 dark:to-stone-900 py-16 md:py-24 text-center">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
@@ -179,7 +179,7 @@ const Puzzles = () => {
           </motion.div>
 
           <Brain className="mx-auto mb-6 text-purple-600 dark:text-purple-400" size={48} />
-          <h1 className="text-4xl md:text-6xl font-serif font-bold text-stone-900 dark:text-stone-100 mb-6">
+          <h1 className="text-3xl md:text-6xl font-serif font-bold text-stone-900 dark:text-stone-100 mb-6 sm:text-4xl">
             {t('puzzles.title')}
           </h1>
           <p className="max-w-3xl mx-auto text-xl text-stone-700 dark:text-stone-300 px-4">
@@ -241,7 +241,7 @@ const Puzzles = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: index * 0.05 }}
-              className="bg-gradient-to-br from-stone-50 to-purple-50 dark:from-stone-800 dark:to-stone-700 p-8 rounded-2xl shadow-lg border-l-4 border-purple-600"
+              className="bg-gradient-to-br from-stone-50 to-purple-50 dark:from-stone-800 dark:to-stone-700 p-5 sm:p-8 rounded-2xl shadow-lg border-l-4 border-purple-600"
             >
               <div className="flex items-start gap-4 mb-4">
                 <HelpCircle className="text-purple-600 dark:text-purple-400 flex-shrink-0 mt-1" size={28} />
@@ -326,7 +326,7 @@ const Puzzles = () => {
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="bg-white dark:bg-stone-800 rounded-2xl shadow-2xl p-8 md:p-12"
+            className="bg-white dark:bg-stone-800 rounded-2xl shadow-2xl p-5 sm:p-8 md:p-12"
           >
             <div className="flex items-center gap-4 mb-6">
               <div className="p-4 bg-purple-600 rounded-full">

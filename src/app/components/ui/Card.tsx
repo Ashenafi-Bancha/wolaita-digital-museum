@@ -35,7 +35,7 @@ const Card: FC<CardProps> = ({ title, image, excerpt, link, delay = 0 }) => {
           className="absolute bottom-0 left-0 right-0 opacity-90"
         />
       </div>
-      <div className="relative z-[1] p-8">
+      <div className="relative z-[1] p-5 sm:p-8">
         <div className="card-accent-bar mb-4" />
         <h3 className="mb-3 font-serif text-xl font-bold text-stone-900 dark:text-stone-100 md:text-2xl">
           {title}
@@ -45,7 +45,7 @@ const Card: FC<CardProps> = ({ title, image, excerpt, link, delay = 0 }) => {
         </p>
         <Link
           to={link}
-          className="inline-flex items-center font-semibold text-[rgb(var(--wolaita-forest))] transition-all group-hover:gap-3 dark:text-[rgb(var(--wolaita-gold))]"
+          className="inline-flex min-h-11 items-center font-semibold text-[rgb(var(--wolaita-forest))] transition-all group-hover:gap-3 dark:text-[rgb(var(--wolaita-gold))]"
         >
           Read More <ArrowRight size={16} className="ml-2" />
         </Link>

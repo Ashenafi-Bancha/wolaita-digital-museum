@@ -160,7 +160,7 @@ const Marccuwaa = () => {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.4 }}
-              className="text-5xl md:text-7xl font-serif font-bold text-stone-900 dark:text-white mb-6"
+              className="text-3xl md:text-7xl font-serif font-bold text-stone-900 dark:text-white mb-6 sm:text-5xl"
             >
               {t('marccuwaa.title')}
             </motion.h1>
@@ -169,7 +169,7 @@ const Marccuwaa = () => {
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ delay: 0.6 }}
-              className="inline-block bg-gradient-to-r from-yellow-400 to-orange-500 rounded-full px-8 py-3 mb-6 shadow-lg"
+              className="inline-block bg-gradient-to-r from-yellow-400 to-orange-500 rounded-full px-5 sm:px-8 py-3 mb-6 shadow-lg"
             >
               <p className="text-xl md:text-2xl text-white font-serif font-bold">
                 {t('marccuwaa.subtitle')}
@@ -267,7 +267,7 @@ const Marccuwaa = () => {
             transition={{ duration: 0.6 }}
             className="order-1 lg:order-2"
           >
-            <div className="relative bg-gradient-to-br from-stone-100 to-orange-100 dark:from-stone-800 dark:to-stone-700 rounded-3xl p-8 md:p-12 shadow-2xl">
+            <div className="relative bg-gradient-to-br from-stone-100 to-orange-100 dark:from-stone-800 dark:to-stone-700 rounded-3xl p-5 sm:p-8 md:p-12 shadow-2xl">
               {/* Subtle top lighting effect */}
               <div className="absolute inset-0 bg-gradient-to-b from-white/40 to-transparent dark:from-white/10 rounded-3xl pointer-events-none"></div>
               
@@ -424,7 +424,7 @@ const Marccuwaa = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: index * 0.15 }}
-              className="relative bg-gradient-to-br from-stone-50 to-orange-50 dark:from-stone-800 dark:to-stone-700 p-8 rounded-2xl shadow-xl text-center overflow-hidden group hover:shadow-2xl transition-all"
+              className="relative bg-gradient-to-br from-stone-50 to-orange-50 dark:from-stone-800 dark:to-stone-700 p-5 sm:p-8 rounded-2xl shadow-xl text-center overflow-hidden group hover:shadow-2xl transition-all"
             >
               {/* Gradient accent on hover */}
               <div className={`absolute inset-0 bg-gradient-to-br ${feature.color} opacity-0 group-hover:opacity-10 transition-opacity`}></div>
@@ -469,10 +469,10 @@ const Marccuwaa = () => {
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
               transition={{ delay: index * 0.1 }}
-              className="bg-white dark:bg-stone-800 p-8 rounded-xl shadow-lg border-l-4 border-yellow-400 hover:shadow-2xl transition-all"
+              className="bg-white dark:bg-stone-800 p-5 sm:p-8 rounded-xl shadow-lg border-l-4 border-yellow-400 hover:shadow-2xl transition-all"
             >
-              <div className="flex items-start gap-4">
-                <div className="p-3 bg-gradient-to-br from-yellow-400 to-red-600 rounded-lg text-white shadow-lg shrink-0">
+              <div className="flex flex-col gap-3 sm:flex-row sm:items-start sm:gap-4">
+                <div className="self-start p-3 bg-gradient-to-br from-yellow-400 to-red-600 rounded-lg text-white shadow-lg shrink-0">
                   {role.icon}
                 </div>
                 <div>
@@ -513,7 +513,7 @@ const Marccuwaa = () => {
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
               transition={{ delay: index * 0.15 }}
-              className="bg-gradient-to-r from-stone-50 to-orange-50 dark:from-stone-800 dark:to-stone-700 p-8 rounded-xl shadow-lg border-l-4 border-red-600 relative hover:shadow-2xl transition-all"
+              className="bg-gradient-to-r from-stone-50 to-orange-50 dark:from-stone-800 dark:to-stone-700 p-5 sm:p-8 rounded-xl shadow-lg border-l-4 border-red-600 relative hover:shadow-2xl transition-all"
             >
               <div className="flex flex-col md:flex-row md:items-center justify-between gap-4 mb-4">
                 <h3 className="text-2xl font-serif font-bold text-stone-900 dark:text-stone-100">
@@ -559,9 +559,9 @@ const Marccuwaa = () => {
               whileInView={{ opacity: 1, scale: 1 }}
               viewport={{ once: true }}
               transition={{ delay: index * 0.1 }}
-              className="bg-white dark:bg-stone-800 p-8 rounded-xl shadow-lg hover:shadow-2xl transition-all"
+              className="bg-white dark:bg-stone-800 p-5 sm:p-8 rounded-xl shadow-lg hover:shadow-2xl transition-all"
             >
-              <div className="flex items-start gap-4">
+              <div className="flex flex-col gap-3 sm:flex-row sm:items-start sm:gap-4">
                 <div className="w-12 h-12 bg-gradient-to-br from-yellow-400 to-red-600 rounded-full flex items-center justify-center text-white font-bold text-xl shrink-0 shadow-lg">
                   {index + 1}
                 </div>

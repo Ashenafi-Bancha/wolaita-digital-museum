@@ -599,13 +599,13 @@ export default function Quiz() {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
-            className="text-center mb-16"
+            className="text-center mb-10 md:mb-16"
           >
             <div className="inline-flex items-center gap-2 px-4 py-2 bg-amber-100 dark:bg-amber-900/30 rounded-full text-amber-800 dark:text-amber-300 text-sm font-semibold mb-6">
               <Sparkles size={16} />
               Interactive Cultural Quiz
             </div>
-            <h1 className="font-serif text-5xl md:text-6xl font-bold text-stone-900 dark:text-stone-50 mb-4 leading-tight">
+            <h1 className="font-serif text-4xl md:text-6xl font-bold text-stone-900 dark:text-stone-50 mb-4 leading-tight sm:text-5xl">
               Wolaita
               <span className="block text-amber-700 dark:text-amber-400">Knowledge Quest</span>
             </h1>
@@ -937,12 +937,12 @@ export default function Quiz() {
             transition={{ duration: 0.5 }}
           >
             {/* Trophy card */}
-            <div className="bg-gradient-to-br from-amber-600 to-orange-700 rounded-3xl p-8 text-white text-center mb-6 shadow-xl shadow-amber-600/20 relative overflow-hidden">
+            <div className="bg-gradient-to-br from-amber-600 to-orange-700 rounded-3xl p-5 sm:p-8 text-white text-center mb-6 shadow-xl shadow-amber-600/20 relative overflow-hidden">
               <div className="absolute inset-0 opacity-10">
                 {[...Array(12)].map((_, i) => (
                   <div
                     key={i}
-                    className="absolute text-4xl"
+                    className="absolute text-3xl sm:text-4xl"
                     style={{
                       left: `${(i % 4) * 28 + 4}%`,
                       top: `${Math.floor(i / 4) * 36 + 5}%`,
@@ -954,22 +954,22 @@ export default function Quiz() {
                 ))}
               </div>
               <div className="relative">
-                <div className="text-6xl mb-3">{rank.emoji}</div>
+                <div className="text-5xl mb-3 sm:text-6xl">{rank.emoji}</div>
                 <div className="font-serif text-3xl font-bold mb-1">{rank.label}</div>
                 <div className="text-amber-200 text-sm mb-6">Your Cultural Knowledge Rank</div>
                 <div className="flex items-center justify-center gap-8">
                   <div>
-                    <div className="text-4xl font-bold">{score}</div>
+                    <div className="text-3xl font-bold sm:text-4xl">{score}</div>
                     <div className="text-amber-200 text-xs mt-0.5">Correct</div>
                   </div>
                   <div className="text-amber-300 text-2xl">/</div>
                   <div>
-                    <div className="text-4xl font-bold">{questions.length}</div>
+                    <div className="text-3xl font-bold sm:text-4xl">{questions.length}</div>
                     <div className="text-amber-200 text-xs mt-0.5">Total</div>
                   </div>
                   <div className="text-amber-300 text-2xl">=</div>
                   <div>
-                    <div className="text-4xl font-bold">{pct}%</div>
+                    <div className="text-3xl font-bold sm:text-4xl">{pct}%</div>
                     <div className="text-amber-200 text-xs mt-0.5">Score</div>
                   </div>
                 </div>

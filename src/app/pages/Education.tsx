@@ -27,7 +27,7 @@ const Education = () => {
           <motion.a 
             href="#"
             whileHover={{ y: -5 }}
-            className="feature-card-3d block p-8"
+            className="feature-card-3d block p-5 sm:p-8"
           >
             <Book className="text-orange-600 w-10 h-10 mb-4" />
             <h3 className="text-xl font-bold text-stone-900 dark:text-stone-100 mb-2">Wolaita History PDF</h3>
@@ -40,7 +40,7 @@ const Education = () => {
           <motion.a 
             href="#"
             whileHover={{ y: -5 }}
-            className="feature-card-3d block p-8"
+            className="feature-card-3d block p-5 sm:p-8"
           >
             <FileText className="text-orange-600 w-10 h-10 mb-4" />
             <h3 className="text-xl font-bold text-stone-900 dark:text-stone-100 mb-2">Cultural Symbols Guide</h3>
@@ -53,7 +53,7 @@ const Education = () => {
           <motion.a 
             href="#"
             whileHover={{ y: -5 }}
-            className="feature-card-3d block p-8"
+            className="feature-card-3d block p-5 sm:p-8"
           >
             <Book className="text-orange-600 w-10 h-10 mb-4" />
             <h3 className="text-xl font-bold text-stone-900 dark:text-stone-100 mb-2">Language Basics</h3>

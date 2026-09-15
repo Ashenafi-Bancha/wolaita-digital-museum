@@ -53,14 +53,27 @@
     --wolaita-hero-gradient: linear-gradient(90deg, rgb(var(--wolaita-forest)) 0%, rgb(var(--wolaita-gold)) 52%, rgb(var(--wolaita-clay)) 100%);
   }
 
+  html {
+    -webkit-text-size-adjust: 100%;
+    text-size-adjust: 100%;
+  }
+
   body {
     @apply bg-stone-50 text-stone-900 antialiased;
+    -webkit-tap-highlight-color: rgba(242, 201, 76, 0.2);
     background-image:
       radial-gradient(circle at top left, rgba(34, 197, 94, 0.16), transparent 28%),
       radial-gradient(circle at top right, rgba(234, 179, 8, 0.12), transparent 24%),
       radial-gradient(circle at bottom right, rgba(220, 38, 38, 0.1), transparent 22%),
       linear-gradient(180deg, rgba(247, 250, 244, 1) 0%, rgba(236, 243, 229, 1) 100%);
     background-attachment: fixed;
+  }
+
+  /* Fixed backgrounds repaint on every scroll frame on phones and tablets. */
+  @media (max-width: 1023px) {
+    body {
+      background-attachment: scroll;
+    }
   }
 
   /* Dark Theme */
@@ -315,9 +328,9 @@
   border: 1px solid rgba(255, 255, 255, 0.15);
   background: rgba(255, 255, 255, 0.1);
   padding: 0.5rem 1rem;
-  font-size: 0.7rem;
+  font-size: 0.75rem;
   font-weight: 700;
-  letter-spacing: 0.12em;
+  letter-spacing: 0.1em;
   text-transform: uppercase;
   color: rgba(255, 255, 255, 0.85);
   backdrop-filter: blur(12px);
@@ -561,7 +574,7 @@
 .yooyo-gifaataa-3d {
   display: block;
   font-family: var(--font-serif);
-  font-size: clamp(3.5rem, 12vw, 8rem);
+  font-size: clamp(2.75rem, 12vw, 8rem);
   font-weight: 900;
   line-height: 0.95;
   letter-spacing: 0.03em;

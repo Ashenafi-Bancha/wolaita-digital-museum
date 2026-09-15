@@ -28,7 +28,7 @@ const Culture = () => {
       />
 
       <Section>
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center mb-24">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 md:gap-16 items-center mb-24">
           <motion.div
             initial={{ opacity: 0, x: -30 }}
             whileInView={{ opacity: 1, x: 0 }}
@@ -51,7 +51,7 @@ const Culture = () => {
           </div>
         </div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center flex-row-reverse mb-24">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 md:gap-16 items-center flex-row-reverse mb-24">
           <div className="order-2 lg:order-1 space-y-6">
             <h2 className="text-3xl font-serif font-bold text-stone-900 dark:text-stone-100">Social Organization</h2>
             <p className="text-lg text-stone-700 dark:text-stone-300 leading-relaxed">
@@ -75,7 +75,7 @@ const Culture = () => {
           </motion.div>
         </div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center mb-24">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 md:gap-16 items-center mb-24">
           <motion.div
             initial={{ opacity: 0, x: -30 }}
             whileInView={{ opacity: 1, x: 0 }}
@@ -95,7 +95,7 @@ const Culture = () => {
           </div>
         </div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center flex-row-reverse mb-24">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 md:gap-16 items-center flex-row-reverse mb-24">
           <div className="order-2 lg:order-1 space-y-6">
             <h2 className="text-3xl font-serif font-bold text-stone-900 dark:text-stone-100">Agricultural Practices</h2>
             <p className="text-lg text-stone-700 dark:text-stone-300 leading-relaxed">
@@ -123,10 +123,10 @@ const Culture = () => {
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="text-center mb-16"
+          className="text-center mb-10 md:mb-16"
         >
           <Home className="mx-auto mb-4 text-orange-600 dark:text-orange-400" size={64} />
-          <h2 className="text-4xl md:text-6xl font-serif font-bold text-stone-900 dark:text-stone-100 mb-4">
+          <h2 className="text-3xl md:text-6xl font-serif font-bold text-stone-900 dark:text-stone-100 mb-4 sm:text-4xl">
             Traditional Architecture
           </h2>
           <p className="text-stone-600 dark:text-stone-300 text-lg max-w-3xl mx-auto">
@@ -135,7 +135,7 @@ const Culture = () => {
         </motion.div>
 
         {/* House Images Gallery */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-6xl mx-auto mb-16">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-6xl mx-auto mb-10 md:mb-16">
           <motion.div
             initial={{ opacity: 0, scale: 0.9 }}
             whileInView={{ opacity: 1, scale: 1 }}
@@ -146,9 +146,9 @@ const Culture = () => {
             <img loading="lazy" decoding="async" 
               src={traditionalHouse1} 
               alt="Traditional Wolaita Tukul house with thatched roof" 
-              className="w-full h-[450px] object-cover group-hover:scale-110 transition-transform duration-500"
+              className="w-full h-72 sm:h-96 md:h-[450px] object-cover group-hover:scale-110 transition-transform duration-500"
             />
-            <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent flex items-end p-8">
+            <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent flex items-end p-5 sm:p-8">
               <div>
                 <h3 className="text-2xl font-serif font-bold text-white mb-2">Classic Tukul Design</h3>
                 <p className="text-stone-200">Round structure with conical thatched roof made from grass and bamboo, designed for climate adaptation.</p>
@@ -166,9 +166,9 @@ const Culture = () => {
             <img loading="lazy" decoding="async" 
               src={traditionalHouse2} 
               alt="Traditional Wolaita house with wooden door entrance" 
-              className="w-full h-[450px] object-cover group-hover:scale-110 transition-transform duration-500"
+              className="w-full h-72 sm:h-96 md:h-[450px] object-cover group-hover:scale-110 transition-transform duration-500"
             />
-            <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent flex items-end p-8">
+            <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent flex items-end p-5 sm:p-8">
               <div>
                 <h3 className="text-2xl font-serif font-bold text-white mb-2">Crafted with Tradition</h3>
                 <p className="text-stone-200">Wooden door entrance and mud walls plastered with natural materials, built using ancestral techniques.</p>
@@ -259,7 +259,7 @@ const Culture = () => {
           viewport={{ once: true }}
           className="max-w-5xl mx-auto mt-16"
         >
-          <div className="bg-white dark:bg-stone-800 p-8 md:p-12 rounded-2xl shadow-2xl">
+          <div className="bg-white dark:bg-stone-800 p-5 sm:p-8 md:p-12 rounded-2xl shadow-2xl">
             <h3 className="text-2xl md:text-3xl font-serif font-bold text-stone-900 dark:text-stone-100 mb-6 text-center">
               The Art of Tukul Construction
             </h3>

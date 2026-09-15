@@ -6,7 +6,9 @@ const Layout = () => {
   const isNavigating = useNavigation().state === 'loading';
 
   return (
-    <div className="flex flex-col min-h-screen bg-stone-50 dark:bg-stone-900 text-stone-900 dark:text-stone-100 transition-colors duration-300">
+    // overflow-x-clip stops slide-in animations from widening the page on phones
+    // (set here, not on <body>, where it would propagate to the viewport and stop working).
+    <div className="flex flex-col min-h-screen overflow-x-clip bg-stone-50 dark:bg-stone-900 text-stone-900 dark:text-stone-100 transition-colors duration-300">
       <ScrollRestoration />
       {isNavigating && (
         <div

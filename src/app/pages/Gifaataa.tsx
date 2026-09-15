@@ -75,7 +75,7 @@ const Gifaataa = () => {
       </Helmet>
 
       {/* Hero — 3D text only, no background image */}
-      <div className="relative flex min-h-screen w-full items-center justify-center overflow-hidden gifaataa-hero-bg">
+      <div className="relative flex min-h-svh w-full items-center justify-center overflow-hidden gifaataa-hero-bg">
         <div className="yooyo-gifaataa-glow" aria-hidden="true" />
         <div className="pointer-events-none absolute inset-0 overflow-hidden" aria-hidden="true">
           {[...Array(6)].map((_, i) => (
@@ -191,7 +191,7 @@ const Gifaataa = () => {
                   <span>The Grand Procession</span>
                 </div>
                 
-                <h2 className="mb-6 font-serif text-4xl font-bold leading-tight text-white md:text-5xl lg:text-6xl">
+                <h2 className="mb-6 font-serif text-3xl font-bold leading-tight text-white md:text-5xl lg:text-6xl sm:text-4xl">
                   The Legendary Horse Cavalry
                 </h2>
                 
@@ -213,10 +213,10 @@ const Gifaataa = () => {
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="text-center mb-16"
+            className="text-center mb-10 md:mb-16"
           >
             <div className="card-accent-bar mx-auto mb-6" />
-            <h2 className="text-4xl md:text-6xl font-serif font-bold text-stone-900 dark:text-stone-100 mb-6">
+            <h2 className="text-3xl md:text-6xl font-serif font-bold text-stone-900 dark:text-stone-100 mb-6 sm:text-4xl">
               What is Gifaataa?
             </h2>
             <div className="prose prose-lg max-w-none text-stone-700 dark:text-stone-300 space-y-6">
@@ -236,7 +236,7 @@ const Gifaataa = () => {
 
       {/* Community Dance - Split Layout */}
       <Section className="bg-stone-100 dark:bg-stone-900">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-12 items-center">
           <motion.div
             initial={{ opacity: 0, x: -50 }}
             whileInView={{ opacity: 1, x: 0 }}
@@ -276,7 +276,7 @@ const Gifaataa = () => {
               <span>Unity in Celebration</span>
             </div>
 
-            <h2 className="text-4xl md:text-5xl font-serif font-bold text-stone-900 dark:text-stone-100 mb-6">
+            <h2 className="text-3xl md:text-5xl font-serif font-bold text-stone-900 dark:text-stone-100 mb-6 sm:text-4xl">
               The Sacred Dance of Unity
             </h2>
 
@@ -314,7 +314,7 @@ const Gifaataa = () => {
 
       {/* Traditional Home Ceremonies */}
       <Section className="bg-stone-50 dark:bg-stone-950">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-12 items-center">
           <motion.div
             initial={{ opacity: 0, x: -50 }}
             whileInView={{ opacity: 1, x: 0 }}
@@ -326,7 +326,7 @@ const Gifaataa = () => {
               <span>Sacred Traditions</span>
             </div>
 
-            <h2 className="text-4xl md:text-5xl font-serif font-bold text-stone-900 dark:text-stone-100 mb-6">
+            <h2 className="text-3xl md:text-5xl font-serif font-bold text-stone-900 dark:text-stone-100 mb-6 sm:text-4xl">
               Blessings in the Traditional Home
             </h2>
 
@@ -383,10 +383,10 @@ const Gifaataa = () => {
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="text-center mb-16"
+          className="text-center mb-10 md:mb-16"
         >
           <div className="card-accent-bar mx-auto mb-6" />
-          <h2 className="text-4xl md:text-6xl font-serif font-bold text-stone-900 dark:text-stone-100 mb-4">
+          <h2 className="text-3xl md:text-6xl font-serif font-bold text-stone-900 dark:text-stone-100 mb-4 sm:text-4xl">
             How Gifaataa is Celebrated
           </h2>
           <p className="text-stone-600 dark:text-stone-300 text-lg max-w-3xl mx-auto">
@@ -403,7 +403,7 @@ const Gifaataa = () => {
               viewport={{ once: true }}
               transition={{ delay: index * 0.1 }}
               whileHover={{ y: -10 }}
-              className="surface-3d p-8 rounded-2xl text-center transition-all"
+              className="surface-3d p-5 sm:p-8 rounded-2xl text-center transition-all"
             >
               <div className="inline-block p-4 rounded-full bg-[rgb(var(--wolaita-gold))]/15 text-[rgb(var(--wolaita-forest))] dark:text-[rgb(var(--wolaita-gold))] mb-6">
                 {item.icon}
@@ -425,10 +425,10 @@ const Gifaataa = () => {
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="text-center mb-16"
+          className="text-center mb-10 md:mb-16"
         >
           <div className="card-accent-bar mx-auto mb-6" />
-          <h2 className="text-4xl md:text-6xl font-serif font-bold text-stone-900 dark:text-stone-100 mb-4">
+          <h2 className="text-3xl md:text-6xl font-serif font-bold text-stone-900 dark:text-stone-100 mb-4 sm:text-4xl">
             Traditions & Customs
           </h2>
           <p className="text-stone-600 dark:text-stone-300 text-lg max-w-3xl mx-auto">
@@ -445,7 +445,7 @@ const Gifaataa = () => {
               viewport={{ once: true }}
               transition={{ delay: index * 0.1 }}
               whileHover={{ y: -6 }}
-              className="surface-3d p-8 rounded-2xl transition-all"
+              className="surface-3d p-5 sm:p-8 rounded-2xl transition-all"
             >
               <div className="card-accent-bar mb-4" />
               <h3 className="text-2xl font-serif font-bold text-stone-900 dark:text-stone-100 mb-4">
@@ -469,7 +469,7 @@ const Gifaataa = () => {
             className="text-center mb-12"
           >
             <div className="card-accent-bar mx-auto mb-6" />
-            <h2 className="text-4xl md:text-6xl font-serif font-bold text-stone-900 dark:text-stone-100 mb-4">
+            <h2 className="text-3xl md:text-6xl font-serif font-bold text-stone-900 dark:text-stone-100 mb-4 sm:text-4xl">
               Gifaataa Greetings
             </h2>
             <p className="text-stone-600 dark:text-stone-300 text-lg">
@@ -512,7 +512,7 @@ const Gifaataa = () => {
           >
             <Sparkles className="mx-auto mb-6 text-[rgb(var(--wolaita-gold))]" size={48} />
 
-            <h2 className="text-4xl md:text-6xl font-serif font-bold mb-8">
+            <h2 className="text-3xl md:text-6xl font-serif font-bold mb-8 sm:text-4xl">
               A Global Cultural Treasure
             </h2>
             <div className="space-y-6 text-lg md:text-xl leading-relaxed text-stone-300">

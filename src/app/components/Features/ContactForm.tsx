@@ -22,7 +22,7 @@ const ContactForm = () => {
       <motion.div
         initial={{ opacity: 0, scale: 0.9 }}
         animate={{ opacity: 1, scale: 1 }}
-        className="bg-green-50 border border-green-200 rounded-lg p-8 text-center"
+        className="bg-green-50 border border-green-200 rounded-lg p-5 sm:p-8 text-center"
       >
         <div className="flex justify-center mb-4">
           <CheckCircle className="text-green-600 w-16 h-16" />
