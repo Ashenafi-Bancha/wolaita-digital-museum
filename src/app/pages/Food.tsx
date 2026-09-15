@@ -8,16 +8,16 @@ import { Utensils, Coffee, Award, Heart, ChefHat } from 'lucide-react';
 import { useLanguage } from '../context/LanguageContext';
 
 // Import authentic Wolaita food images
-import foodPlatter1 from 'figma:asset/55149766c615418283f37408e8fd1453f3442191.png';
-import foodPlatter2 from 'figma:asset/617ad915179602f3718e897397a17a776dec5817.png';
-import foodPlatter3 from 'figma:asset/9b5c88459573b3133266b17aae8448b56fbfcb46.png';
+import foodPlatter1 from 'figma:asset/55149766c615418283f37408e8fd1453f3442191.webp';
+import foodPlatter2 from 'figma:asset/617ad915179602f3718e897397a17a776dec5817.webp';
+import foodPlatter3 from 'figma:asset/9b5c88459573b3133266b17aae8448b56fbfcb46.webp';
 
 const Food = () => {
   const { t } = useLanguage();
   const dishes = [
     {
       name: "Injera & Wot",
-      image: "https://images.unsplash.com/photo-1765338915553-6e02fe63ff4f?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxFdGhpb3BpYW4lMjBmb29kJTIwaW5qZXJhJTIwdHJhZGl0aW9uYWwlMjBtZWFsfGVufDF8fHx8MTc3MTM2ODUwNHww&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral",
+      image: "https://images.unsplash.com/photo-1765338915553-6e02fe63ff4f?crop=entropy&cs=tinysrgb&fit=max&auto=format&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxFdGhpb3BpYW4lMjBmb29kJTIwaW5qZXJhJTIwdHJhZGl0aW9uYWwlMjBtZWFsfGVufDF8fHx8MTc3MTM2ODUwNHww&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral",
       description: "Like much of Ethiopia, Injera (fermented flatbread) is a staple. It is served with various spicy stews (Wot) made from lentils, chickpeas, or meat.",
       category: "Main Dish"
     },
@@ -38,7 +38,7 @@ const Food = () => {
     },
     {
       name: "Bunna (Coffee)",
-      image: "https://images.unsplash.com/photo-1576073383046-eaf2c135314d?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxFdGhpb3BpYW4lMjBjb2ZmZWUlMjBjZXJlbW9ueSUyMHRyYWRpdGlvbmFsfGVufDF8fHx8MTc3MTM2ODUwNHww&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral",
+      image: "https://images.unsplash.com/photo-1576073383046-eaf2c135314d?crop=entropy&cs=tinysrgb&fit=max&auto=format&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxFdGhpb3BpYW4lMjBjb2ZmZWUlMjBjZXJlbW9ueSUyMHRyYWRpdGlvbmFsfGVufDF8fHx8MTc3MTM2ODUwNHww&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral",
       description: "The coffee ceremony is an integral part of social life. The process involves roasting green beans, grinding them, and brewing in a clay pot (Jebena). Served with popcorn or traditional snacks.",
       category: "Beverage & Ceremony"
     },
@@ -161,7 +161,7 @@ const Food = () => {
             >
               {dish.image ? (
                 <div className="h-48 overflow-hidden">
-                  <img 
+                  <img loading="lazy" decoding="async" 
                     src={dish.image}
                     alt={dish.name}
                     className="w-full h-full object-cover hover:scale-105 transition-transform duration-500"
@@ -214,7 +214,7 @@ const Food = () => {
             transition={{ delay: 0.1 }}
             className="group relative overflow-hidden rounded-2xl shadow-2xl"
           >
-            <img 
+            <img loading="lazy" decoding="async" 
               src={foodPlatter1} 
               alt="Traditional Wolaita food platter with colorful dishes on decorative basket" 
               className="w-full h-[450px] object-cover group-hover:scale-110 transition-transform duration-500"
@@ -240,7 +240,7 @@ const Food = () => {
             transition={{ delay: 0.2 }}
             className="group relative overflow-hidden rounded-2xl shadow-2xl"
           >
-            <img 
+            <img loading="lazy" decoding="async" 
               src={foodPlatter2} 
               alt="Kocho with various traditional sauces and accompaniments" 
               className="w-full h-[450px] object-cover group-hover:scale-110 transition-transform duration-500"
@@ -266,7 +266,7 @@ const Food = () => {
             transition={{ delay: 0.3 }}
             className="group relative overflow-hidden rounded-2xl shadow-2xl"
           >
-            <img 
+            <img loading="lazy" decoding="async" 
               src={foodPlatter3} 
               alt="Kocho pieces with green and red traditional sauces" 
               className="w-full h-[450px] object-cover group-hover:scale-110 transition-transform duration-500"

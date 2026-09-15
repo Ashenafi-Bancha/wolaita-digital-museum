@@ -1,67 +1,48 @@
 import { createBrowserRouter, Navigate } from "react-router";
+import type { ComponentType } from "react";
 import Layout from "./components/Layout/Layout";
+import PageLoader from "./components/Layout/PageLoader";
 import Home from "./pages/Home";
-import History from "./pages/History";
-import TangibleHeritage from "./pages/TangibleHeritage";
-import IntangibleHeritage from "./pages/IntangibleHeritage";
-import Culture from "./pages/Culture";
-import Festivals from "./pages/Festivals";
-import Food from "./pages/Food";
-import Gallery from "./pages/Gallery";
-import Tourism from "./pages/Tourism";
-import Education from "./pages/Education";
-import About from "./pages/About";
-import Contact from "./pages/Contact";
-import Language from "./pages/Language";
-import Proverbs from "./pages/Proverbs";
-import Sayings from "./pages/Sayings";
-import Puzzles from "./pages/Puzzles";
-import Dictionary from "./pages/Dictionary";
-import Kings from "./pages/Kings";
-import NotablePeople from "./pages/NotablePeople";
-import Accommodation from "./pages/Accommodation";
-import Gifaataa from "./pages/Gifaataa";
-import Dingguza from "./pages/Dingguza";
-import WolaitaCalendar from "./pages/WolaitaCalendar";
-import HeritageSites from "./pages/HeritageSites";
-import LifeCeremonies from "./pages/LifeCeremonies";
-import Marccuwaa from "./pages/Marccuwaa";
-import Music from "./pages/Music";
-import Quiz from "./pages/Quiz";
+
+// Every page except Home is code-split so visitors only download the pages they open.
+const page = (load: () => Promise<{ default: ComponentType }>) => async () => ({
+  Component: (await load()).default,
+});
 
 export const router = createBrowserRouter([
   {
     path: "/",
     Component: Layout,
+    HydrateFallback: PageLoader,
     children: [
       { index: true, Component: Home },
-      { path: "gifaataa", Component: Gifaataa },
-      { path: "dingguza", Component: Dingguza },
-      { path: "marccuwaa", Component: Marccuwaa },
-      { path: "calendar", Component: WolaitaCalendar },
-      { path: "history", Component: History },
-      { path: "kings", Component: Kings },
-      { path: "heritage-sites", Component: HeritageSites },
-      { path: "tangible-heritage", Component: TangibleHeritage },
-      { path: "intangible-heritage", Component: IntangibleHeritage },
-      { path: "culture", Component: Culture },
-      { path: "life-ceremonies", Component: LifeCeremonies },
-      { path: "language", Component: Language },
-      { path: "proverbs", Component: Proverbs },
-      { path: "sayings", Component: Sayings },
-      { path: "puzzles", Component: Puzzles },
-      { path: "dictionary", Component: Dictionary },
-      { path: "festivals", Component: Festivals },
-      { path: "food", Component: Food },
-      { path: "music", Component: Music },
-      { path: "quiz", Component: Quiz },
-      { path: "notable-people", Component: NotablePeople },
-      { path: "gallery", Component: Gallery },
-      { path: "tourism", Component: Tourism },
-      { path: "accommodation", Component: Accommodation },
-      { path: "education", Component: Education },
-      { path: "about", Component: About },
-      { path: "contact", Component: Contact },
+      { path: "gifaataa", lazy: page(() => import("./pages/Gifaataa")) },
+      { path: "dingguza", lazy: page(() => import("./pages/Dingguza")) },
+      { path: "marccuwaa", lazy: page(() => import("./pages/Marccuwaa")) },
+      { path: "calendar", lazy: page(() => import("./pages/WolaitaCalendar")) },
+      { path: "history", lazy: page(() => import("./pages/History")) },
+      { path: "kings", lazy: page(() => import("./pages/Kings")) },
+      { path: "heritage-sites", lazy: page(() => import("./pages/HeritageSites")) },
+      { path: "tangible-heritage", lazy: page(() => import("./pages/TangibleHeritage")) },
+      { path: "intangible-heritage", lazy: page(() => import("./pages/IntangibleHeritage")) },
+      { path: "culture", lazy: page(() => import("./pages/Culture")) },
+      { path: "life-ceremonies", lazy: page(() => import("./pages/LifeCeremonies")) },
+      { path: "language", lazy: page(() => import("./pages/Language")) },
+      { path: "proverbs", lazy: page(() => import("./pages/Proverbs")) },
+      { path: "sayings", lazy: page(() => import("./pages/Sayings")) },
+      { path: "puzzles", lazy: page(() => import("./pages/Puzzles")) },
+      { path: "dictionary", lazy: page(() => import("./pages/Dictionary")) },
+      { path: "festivals", lazy: page(() => import("./pages/Festivals")) },
+      { path: "food", lazy: page(() => import("./pages/Food")) },
+      { path: "music", lazy: page(() => import("./pages/Music")) },
+      { path: "quiz", lazy: page(() => import("./pages/Quiz")) },
+      { path: "notable-people", lazy: page(() => import("./pages/NotablePeople")) },
+      { path: "gallery", lazy: page(() => import("./pages/Gallery")) },
+      { path: "tourism", lazy: page(() => import("./pages/Tourism")) },
+      { path: "accommodation", lazy: page(() => import("./pages/Accommodation")) },
+      { path: "education", lazy: page(() => import("./pages/Education")) },
+      { path: "about", lazy: page(() => import("./pages/About")) },
+      { path: "contact", lazy: page(() => import("./pages/Contact")) },
       { path: "*", element: <Navigate to="/" replace /> },
     ],
   },

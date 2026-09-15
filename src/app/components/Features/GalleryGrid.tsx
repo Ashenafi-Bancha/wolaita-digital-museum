@@ -32,11 +32,10 @@ const GalleryGrid: React.FC<GalleryGridProps> = ({ images }) => {
               className="relative group overflow-hidden rounded-lg cursor-pointer"
               onClick={() => setSelectedImage(image)}
             >
-              <img
+              <img loading="lazy" decoding="async"
                 src={image.src}
                 alt={image.alt}
                 className="w-full h-auto object-cover transition-transform duration-700 group-hover:scale-110"
-                loading="lazy"
               />
               <div className="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
                 <ZoomIn className="text-white w-8 h-8 opacity-0 group-hover:opacity-100 transform translate-y-4 group-hover:translate-y-0 transition-all duration-300" />
@@ -73,7 +72,7 @@ const GalleryGrid: React.FC<GalleryGridProps> = ({ images }) => {
               >
                 <X size={32} />
               </button>
-              <img
+              <img loading="lazy" decoding="async"
                 src={selectedImage.src}
                 alt={selectedImage.alt}
                 className="max-h-[80vh] w-auto object-contain rounded-md shadow-2xl"

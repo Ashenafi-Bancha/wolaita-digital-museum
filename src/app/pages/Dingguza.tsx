@@ -6,10 +6,10 @@ import { Shirt, Crown, Heart, Star, Users, Award } from 'lucide-react';
 import { useLanguage } from '../context/LanguageContext';
 
 // Import authentic Dingguza images
-import dingguza1 from 'figma:asset/3363be406878dadf1ad4360e29fb33af839d0c96.png';
-import dingguza2 from 'figma:asset/6f379a7d7e5d3c953708a6e10605c3f643a5dedd.png';
-import dingguza3 from 'figma:asset/ddacdd9d3636b6f198ed885d99155ab353a4d4b3.png';
-import dingguza4 from 'figma:asset/b9bd48fd90904c5ad3313bbea32a9e06dae8cc05.png';
+import dingguza1 from 'figma:asset/3363be406878dadf1ad4360e29fb33af839d0c96.webp';
+import dingguza2 from 'figma:asset/6f379a7d7e5d3c953708a6e10605c3f643a5dedd.webp';
+import dingguza3 from 'figma:asset/ddacdd9d3636b6f198ed885d99155ab353a4d4b3.webp';
+import dingguza4 from 'figma:asset/b9bd48fd90904c5ad3313bbea32a9e06dae8cc05.webp';
 
 const Dingguza = () => {
   const { t } = useLanguage();
@@ -435,7 +435,7 @@ const Dingguza = () => {
             transition={{ delay: 0.1 }}
             className="group relative overflow-hidden rounded-2xl shadow-2xl"
           >
-            <img 
+            <img loading="lazy" decoding="async" 
               src={dingguza1} 
               alt="Woman in traditional Dingguza dress" 
               className="w-full h-[500px] object-cover group-hover:scale-110 transition-transform duration-500"
@@ -456,7 +456,7 @@ const Dingguza = () => {
             transition={{ delay: 0.2 }}
             className="group relative overflow-hidden rounded-2xl shadow-2xl"
           >
-            <img 
+            <img loading="lazy" decoding="async" 
               src={dingguza2} 
               alt="Woman wearing Dingguza as a shawl" 
               className="w-full h-[500px] object-cover group-hover:scale-110 transition-transform duration-500"
@@ -477,7 +477,7 @@ const Dingguza = () => {
             transition={{ delay: 0.3 }}
             className="group relative overflow-hidden rounded-2xl shadow-2xl"
           >
-            <img 
+            <img loading="lazy" decoding="async" 
               src={dingguza3} 
               alt="Close-up portrait in Dingguza attire" 
               className="w-full h-[500px] object-cover group-hover:scale-110 transition-transform duration-500"
@@ -498,7 +498,7 @@ const Dingguza = () => {
             transition={{ delay: 0.4 }}
             className="group relative overflow-hidden rounded-2xl shadow-2xl"
           >
-            <img 
+            <img loading="lazy" decoding="async" 
               src={dingguza4} 
               alt="Community in traditional Dingguza" 
               className="w-full h-[500px] object-cover group-hover:scale-110 transition-transform duration-500"

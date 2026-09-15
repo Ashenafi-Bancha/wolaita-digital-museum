@@ -804,7 +804,7 @@ export default function Quiz() {
                 {/* Image for image-identify questions */}
                 {currentQuestion.image && (
                   <div className="relative">
-                    <img
+                    <img loading="lazy" decoding="async"
                       src={currentQuestion.image}
                       alt={currentQuestion.imageAlt || ''}
                       className="w-full h-48 object-cover"
@@ -1085,7 +1085,7 @@ export default function Quiz() {
                   <DifficultyBadge difficulty={reviewQ.difficulty} />
                 </div>
                 {reviewQ.image && (
-                  <img src={reviewQ.image} alt={reviewQ.imageAlt || ''} className="w-full h-40 object-cover" />
+                  <img loading="lazy" decoding="async" src={reviewQ.image} alt={reviewQ.imageAlt || ''} className="w-full h-40 object-cover" />
                 )}
                 <div className="px-6 py-5">
                   <p className="text-base font-semibold text-stone-900 dark:text-stone-50 leading-relaxed">{reviewQ.question}</p>

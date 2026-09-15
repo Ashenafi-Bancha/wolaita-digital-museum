@@ -7,8 +7,8 @@ import { Home, Users2, Leaf, Building } from 'lucide-react';
 import { useLanguage } from '../context/LanguageContext';
 
 // Import traditional house images
-import traditionalHouse1 from 'figma:asset/dec0eaeec5ae949354005db9b2ff79a5c3a2fa12.png';
-import traditionalHouse2 from 'figma:asset/58e84680c340be2e619e8ec0c32ae0ab589f1a34.png';
+import traditionalHouse1 from 'figma:asset/dec0eaeec5ae949354005db9b2ff79a5c3a2fa12.webp';
+import traditionalHouse2 from 'figma:asset/58e84680c340be2e619e8ec0c32ae0ab589f1a34.webp';
 
 const Culture = () => {
   const { t } = useLanguage();
@@ -23,7 +23,7 @@ const Culture = () => {
         title={t('culture.title')}
         subtitle={t('culture.subtitle')}
         badge="Daily Life & Traditions"
-        image="https://images.unsplash.com/photo-1598122666068-59b41e0a3193?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxFdGhpb3BpYW4lMjBwZW9wbGUlMjB0cmFkaXRpb25hbCUyMGNsb3RoaW5nJTIwcG9ydHJhaXR8ZW58MXx8fHwxNzcxMzY4NTA0fDA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral"
+        image="https://images.unsplash.com/photo-1598122666068-59b41e0a3193?crop=entropy&cs=tinysrgb&fit=max&auto=format&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxFdGhpb3BpYW4lMjBwZW9wbGUlMjB0cmFkaXRpb25hbCUyMGNsb3RoaW5nJTIwcG9ydHJhaXR8ZW58MXx8fHwxNzcxMzY4NTA0fDA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral"
         imageAlt="Wolaita cultural traditions"
       />
 
@@ -34,8 +34,8 @@ const Culture = () => {
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
           >
-            <img 
-              src="https://images.unsplash.com/photo-1598122666068-59b41e0a3193?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxFdGhpb3BpYW4lMjBwZW9wbGUlMjB0cmFkaXRpb25hbCUyMGNsb3RoaW5nJTIwcG9ydHJhaXR8ZW58MXx8fHwxNzcxMzY4NTA0fDA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral"
+            <img loading="lazy" decoding="async" 
+              src="https://images.unsplash.com/photo-1598122666068-59b41e0a3193?crop=entropy&cs=tinysrgb&fit=max&auto=format&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxFdGhpb3BpYW4lMjBwZW9wbGUlMjB0cmFkaXRpb25hbCUyMGNsb3RoaW5nJTIwcG9ydHJhaXR8ZW58MXx8fHwxNzcxMzY4NTA0fDA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral"
               alt="Traditional Clothing"
               className="rounded-lg shadow-xl w-full h-auto object-cover"
             />
@@ -67,8 +67,8 @@ const Culture = () => {
             viewport={{ once: true }}
             className="order-1 lg:order-2"
           >
-            <img 
-              src="https://images.unsplash.com/photo-1770562325764-694b655db57e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxFdGhpb3BpYW4lMjB2aWxsYWdlJTIwdHJhZGl0aW9uYWwlMjBodXR8ZW58MXx8fHwxNzcxMzY4NTA0fDA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral"
+            <img loading="lazy" decoding="async" 
+              src="https://images.unsplash.com/photo-1770562325764-694b655db57e?crop=entropy&cs=tinysrgb&fit=max&auto=format&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxFdGhpb3BpYW4lMjB2aWxsYWdlJTIwdHJhZGl0aW9uYWwlMjBodXR8ZW58MXx8fHwxNzcxMzY4NTA0fDA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral"
               alt="Community Life"
               className="rounded-lg shadow-xl w-full h-auto object-cover"
             />
@@ -81,7 +81,7 @@ const Culture = () => {
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
           >
-            <img 
+            <img loading="lazy" decoding="async" 
               src={traditionalHouse1}
               alt="Traditional House"
               className="rounded-lg shadow-xl w-full h-auto object-cover"
@@ -108,7 +108,7 @@ const Culture = () => {
             viewport={{ once: true }}
             className="order-1 lg:order-2"
           >
-            <img 
+            <img loading="lazy" decoding="async" 
               src={traditionalHouse2}
               alt="Traditional House"
               className="rounded-lg shadow-xl w-full h-auto object-cover"
@@ -143,7 +143,7 @@ const Culture = () => {
             transition={{ delay: 0.1 }}
             className="group relative overflow-hidden rounded-2xl shadow-2xl"
           >
-            <img 
+            <img loading="lazy" decoding="async" 
               src={traditionalHouse1} 
               alt="Traditional Wolaita Tukul house with thatched roof" 
               className="w-full h-[450px] object-cover group-hover:scale-110 transition-transform duration-500"
@@ -163,7 +163,7 @@ const Culture = () => {
             transition={{ delay: 0.2 }}
             className="group relative overflow-hidden rounded-2xl shadow-2xl"
           >
-            <img 
+            <img loading="lazy" decoding="async" 
               src={traditionalHouse2} 
               alt="Traditional Wolaita house with wooden door entrance" 
               className="w-full h-[450px] object-cover group-hover:scale-110 transition-transform duration-500"

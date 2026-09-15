@@ -7,8 +7,8 @@ import { Mountain, Church, Trees, Landmark, MapPin, Camera } from 'lucide-react'
 import { useLanguage } from '../context/LanguageContext';
 
 // Import traditional house images
-import traditionalHouse1 from 'figma:asset/dec0eaeec5ae949354005db9b2ff79a5c3a2fa12.png';
-import traditionalHouse2 from 'figma:asset/58e84680c340be2e619e8ec0c32ae0ab589f1a34.png';
+import traditionalHouse1 from 'figma:asset/dec0eaeec5ae949354005db9b2ff79a5c3a2fa12.webp';
+import traditionalHouse2 from 'figma:asset/58e84680c340be2e619e8ec0c32ae0ab589f1a34.webp';
 
 const HeritageSites = () => {
   const { t } = useLanguage();
@@ -312,7 +312,7 @@ const HeritageSites = () => {
             transition={{ delay: 0.1 }}
             className="group relative overflow-hidden rounded-2xl shadow-2xl"
           >
-            <img 
+            <img loading="lazy" decoding="async" 
               src={traditionalHouse1} 
               alt="Traditional Wolaita Tukul house with thatched roof" 
               className="w-full h-[500px] object-cover group-hover:scale-110 transition-transform duration-500"
@@ -338,7 +338,7 @@ const HeritageSites = () => {
             transition={{ delay: 0.2 }}
             className="group relative overflow-hidden rounded-2xl shadow-2xl"
           >
-            <img 
+            <img loading="lazy" decoding="async" 
               src={traditionalHouse2} 
               alt="Traditional Wolaita house with wooden door entrance" 
               className="w-full h-[500px] object-cover group-hover:scale-110 transition-transform duration-500"

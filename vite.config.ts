@@ -31,4 +31,16 @@ export default defineConfig({
   },
 
   assetsInclude: ['**/*.svg', '**/*.csv'],
+
+  build: {
+    rollupOptions: {
+      output: {
+        // Long-lived vendor chunks: these rarely change, so returning visitors keep them cached.
+        manualChunks: {
+          react: ['react', 'react-dom', 'react-router'],
+          motion: ['motion/react'],
+        },
+      },
+    },
+  },
 })

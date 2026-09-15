@@ -21,7 +21,7 @@ const Hero: FC<HeroProps> = ({ title, subtitle, image, ctaText, ctaLink = "/hist
   return (
     <section className="relative h-screen w-full overflow-hidden flex items-center justify-center -mt-24">
       <div className="absolute inset-0 z-0">
-        <img
+        <img fetchpriority="high"
           src={image}
           alt={title}
           className="w-full h-full object-cover object-center transform scale-105 animate-slow-zoom"

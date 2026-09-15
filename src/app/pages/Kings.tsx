@@ -10,7 +10,7 @@ const Kings = () => {
   const [selectedKing, setSelectedKing] = useState<number | null>(null);
 
   // Golden King Statue background image
-  const goldenKingStatue = "https://images.unsplash.com/photo-1614981816670-3e65f4cfdb28?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxnb2xkZW4lMjB3YXJyaW9yJTIwc3RhdHVlJTIwaG9yc2ViYWNrJTIwZXRoaW9waWFuJTIwaGVyaXRhZ2V8ZW58MXx8fHwxNzc1MTA5MjMwfDA&ixlib=rb-4.1.0&q=80&w=1080";
+  const goldenKingStatue = "https://images.unsplash.com/photo-1614981816670-3e65f4cfdb28?crop=entropy&cs=tinysrgb&fit=max&auto=format&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxnb2xkZW4lMjB3YXJyaW9yJTIwc3RhdHVlJTIwaG9yc2ViYWNrJTIwZXRoaW9waWFuJTIwaGVyaXRhZ2V8ZW58MXx8fHwxNzc1MTA5MjMwfDA&ixlib=rb-4.1.0&q=80&w=1080";
 
   const notableKings = [
     {

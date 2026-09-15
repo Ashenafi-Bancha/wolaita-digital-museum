@@ -5,15 +5,27 @@
   <url><loc>https://wolaita.org/dingguza</loc><changefreq>monthly</changefreq><priority>0.9</priority></url>
   <url><loc>https://wolaita.org/history</loc><changefreq>monthly</changefreq><priority>0.9</priority></url>
   <url><loc>https://wolaita.org/kings</loc><changefreq>monthly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://wolaita.org/marccuwaa</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://wolaita.org/calendar</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
   <url><loc>https://wolaita.org/heritage-sites</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://wolaita.org/tangible-heritage</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://wolaita.org/intangible-heritage</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
   <url><loc>https://wolaita.org/culture</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
   <url><loc>https://wolaita.org/language</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://wolaita.org/dictionary</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://wolaita.org/tourism</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://wolaita.org/tangible-heritage</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://wolaita.org/intangible-heritage</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://wolaita.org/life-ceremonies</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://wolaita.org/proverbs</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://wolaita.org/sayings</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://wolaita.org/puzzles</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://wolaita.org/festivals</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
   <url><loc>https://wolaita.org/food</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
   <url><loc>https://wolaita.org/music</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://wolaita.org/notable-people</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
   <url><loc>https://wolaita.org/gallery</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://wolaita.org/tourism</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://wolaita.org/quiz</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://wolaita.org/accommodation</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://wolaita.org/education</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
   <url><loc>https://wolaita.org/about</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
   <url><loc>https://wolaita.org/contact</loc><changefreq>yearly</changefreq><priority>0.5</priority></url>
 </urlset>

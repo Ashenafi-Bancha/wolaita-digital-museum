@@ -23,7 +23,7 @@ const Card: FC<CardProps> = ({ title, image, excerpt, link, delay = 0 }) => {
       className="group content-card-3d overflow-hidden"
     >
       <div className="relative h-64 overflow-hidden">
-        <img
+        <img loading="lazy" decoding="async"
           src={image}
           alt={title}
           className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-105"

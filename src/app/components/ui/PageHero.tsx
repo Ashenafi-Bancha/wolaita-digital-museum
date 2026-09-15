@@ -35,7 +35,7 @@ const PageHero: FC<PageHeroProps> = ({
     >
       {image ? (
         <>
-          <img
+          <img fetchpriority="high"
             src={image}
             alt={imageAlt ?? title}
             className="absolute inset-0 h-full w-full scale-105 object-cover object-center animate-slow-zoom"

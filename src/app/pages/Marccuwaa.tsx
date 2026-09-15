@@ -6,7 +6,7 @@ import { Coins, TrendingUp, Users, Scale, Crown, Landmark, ShieldCheck, Sparkles
 import { useLanguage } from '../context/LanguageContext';
 
 // Import authentic Marccuwaa currency images
-import marccuwaaIronBars from 'figma:asset/d68f533a46e1f46727cb03fe255ee67d84d38637.png';
+import marccuwaaIronBars from 'figma:asset/d68f533a46e1f46727cb03fe255ee67d84d38637.webp';
 import marccuwaa3DRender from 'figma:asset/7fe72f375854321789c8355029c9ea0903352cfd.png';
 
 const Marccuwaa = () => {
@@ -271,7 +271,7 @@ const Marccuwaa = () => {
               {/* Subtle top lighting effect */}
               <div className="absolute inset-0 bg-gradient-to-b from-white/40 to-transparent dark:from-white/10 rounded-3xl pointer-events-none"></div>
               
-              <img
+              <img loading="lazy" decoding="async"
                 src={marccuwaa3DRender}
                 alt="3D representation of Marccuwaa iron bars"
                 className="w-full h-auto relative z-10"
@@ -306,7 +306,7 @@ const Marccuwaa = () => {
             transition={{ duration: 0.6 }}
           >
             <div className="relative rounded-3xl overflow-hidden shadow-2xl group">
-              <img
+              <img loading="lazy" decoding="async"
                 src={marccuwaaIronBars}
                 alt="Original Marccuwaa iron currency bars - Historical artifact"
                 className="w-full h-auto transform transition-transform duration-500 group-hover:scale-105"

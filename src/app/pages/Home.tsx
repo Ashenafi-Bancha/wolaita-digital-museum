@@ -4,7 +4,8 @@ import { Link } from "react-router";
 import { motion, useReducedMotion } from "motion/react";
 import { ArrowRight, ChevronRight, MapPin } from "lucide-react";
 import { useLanguage } from "../context/LanguageContext";
-import mountDamotaImage from "../../assets/Mount_Damot.png";
+import mountDamotaImage from "../../assets/Mount_Damot.webp";
+import mountDamotaImageSmall from "../../assets/Mount_Damot-960.webp";
 import { SITE_URL } from "../config/site";
 
 const stats = [
@@ -109,8 +110,10 @@ const Home = () => {
       {/* Hero */}
       <section className="relative isolate flex min-h-[92vh] flex-col items-center justify-center overflow-hidden bg-stone-950">
         <div className="absolute inset-0">
-          <img
+          <img fetchpriority="high"
             src={mountDamotaImage}
+            srcSet={`${mountDamotaImageSmall} 960w, ${mountDamotaImage} 1600w`}
+            sizes="100vw"
             alt="Mount Damota highlands in Wolaita, Southern Ethiopia"
             className="absolute inset-0 h-full w-full scale-105 object-cover object-center animate-slow-zoom"
           />
@@ -369,7 +372,7 @@ const Home = () => {
                 <Link to={item.link} className="block">
                   <div className="surface-3d overflow-hidden rounded-2xl bg-white dark:bg-stone-900">
                     <div className="relative h-48 overflow-hidden">
-                      <img
+                      <img loading="lazy" decoding="async"
                         src={item.image}
                         alt={item.title}
                         className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"

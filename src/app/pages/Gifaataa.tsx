@@ -5,9 +5,9 @@ import { motion } from 'motion/react';
 import { Calendar, Sun, Music, Users, Sparkles, Gift, Heart, Crown, Home } from 'lucide-react';
 import { useLanguage } from '../context/LanguageContext';
 
-import horseCavalry from 'figma:asset/93435183683a01f5d2dca05ceef617677a14f823.png';
-import communityDance from 'figma:asset/0c5453a3f4082a233ee48fe947d0d717b1f194b2.png';
-import traditionalHome from 'figma:asset/bed8fb00e1b7eadb1218b23e901e01caf8ca3e86.png';
+import horseCavalry from 'figma:asset/93435183683a01f5d2dca05ceef617677a14f823.webp';
+import communityDance from 'figma:asset/0c5453a3f4082a233ee48fe947d0d717b1f194b2.webp';
+import traditionalHome from 'figma:asset/bed8fb00e1b7eadb1218b23e901e01caf8ca3e86.webp';
 
 const Gifaataa = () => {
   const { t } = useLanguage();
@@ -95,7 +95,7 @@ const Gifaataa = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1 }}
           >
-            <motion.div
+            <motion.h1
               initial={{ scale: 0.9, opacity: 0 }}
               animate={{ scale: 1, opacity: 1 }}
               transition={{ delay: 0.3, duration: 0.8 }}
@@ -104,7 +104,7 @@ const Gifaataa = () => {
               <span className="yooyo-gifaataa-3d wolaita-premium-gold-glow">
                 Yooyo Gifaataa!
               </span>
-            </motion.div>
+            </motion.h1>
 
             <motion.div
               initial={{ opacity: 0 }}
@@ -166,7 +166,7 @@ const Gifaataa = () => {
         <div className="relative w-full">
           {/* Full-width image */}
           <div className="relative h-[70vh] md:h-[80vh] lg:h-screen">
-            <img
+            <img loading="lazy" decoding="async"
               src={horseCavalry}
               alt="Traditional Wolaita Horse Cavalry in Gifaataa Parade"
               className="w-full h-full object-cover"
@@ -245,7 +245,7 @@ const Gifaataa = () => {
             className="relative order-2 lg:order-1"
           >
             <div className="surface-3d relative overflow-hidden rounded-3xl">
-              <img
+              <img loading="lazy" decoding="async"
                 src={communityDance}
                 alt="Community celebrating Gifaataa with traditional dance"
                 className="w-full h-auto"
@@ -367,7 +367,7 @@ const Gifaataa = () => {
             className="relative"
           >
             <div className="surface-3d relative overflow-hidden rounded-3xl">
-              <img
+              <img loading="lazy" decoding="async"
                 src={traditionalHome}
                 alt="Traditional Wolaita home blessing ceremony during Gifaataa"
                 className="w-full h-auto"

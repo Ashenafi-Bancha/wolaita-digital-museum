@@ -9,7 +9,7 @@ const Footer = () => {
     <footer className="bg-stone-900 text-stone-300">
       {/* Wolaita Dingguza Pattern Stripe */}
       <div className="w-full h-3 overflow-hidden">
-        <img 
+        <img loading="lazy" decoding="async" 
           src={dingguazaPattern} 
           alt="Dingguza Pattern" 
           className="w-full h-full object-cover object-center"

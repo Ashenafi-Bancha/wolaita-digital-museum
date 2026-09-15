@@ -131,7 +131,7 @@ const Music = () => {
         title={t('music.title')}
         subtitle={t('music.subtitle')}
         badge="Traditional Melodies"
-        image="https://images.unsplash.com/photo-1770223625592-3483e07645f5?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxFdGhpb3BpYW4lMjB0cmFkaXRpb25hbCUyMG11c2ljaWFucyUyMHBlcmZvcm1pbmd8ZW58MXx8fHwxNzcyNzQ3NzkwfDA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral"
+        image="https://images.unsplash.com/photo-1770223625592-3483e07645f5?crop=entropy&cs=tinysrgb&fit=max&auto=format&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxFdGhpb3BpYW4lMjB0cmFkaXRpb25hbCUyMG11c2ljaWFucyUyMHBlcmZvcm1pbmd8ZW58MXx8fHwxNzcyNzQ3NzkwfDA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral"
         imageAlt="Wolaita musicians performing"
       />
 
@@ -248,8 +248,8 @@ const Music = () => {
             viewport={{ once: true }}
             className="rounded-xl overflow-hidden shadow-xl"
           >
-            <img
-              src="https://images.unsplash.com/photo-1764670085286-55cd79507a72?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxBZnJpY2FuJTIwdHJhZGl0aW9uYWwlMjBtdXNpYyUyMGluc3RydW1lbnRzfGVufDF8fHx8MTc3Mjc0Nzc5MHww&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral"
+            <img loading="lazy" decoding="async"
+              src="https://images.unsplash.com/photo-1764670085286-55cd79507a72?crop=entropy&cs=tinysrgb&fit=max&auto=format&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxBZnJpY2FuJTIwdHJhZGl0aW9uYWwlMjBtdXNpYyUyMGluc3RydW1lbnRzfGVufDF8fHx8MTc3Mjc0Nzc5MHww&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral"
               alt="Traditional Wolaita instruments"
               className="w-full h-80 object-cover"
             />
@@ -261,8 +261,8 @@ const Music = () => {
             transition={{ delay: 0.2 }}
             className="rounded-xl overflow-hidden shadow-xl"
           >
-            <img
-              src="https://images.unsplash.com/photo-1522168709594-942fcde3d332?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHx0cmFkaXRpb25hbCUyMEFmcmljYW4lMjBkcnVtcyUyMHBlcmN1c3Npb258ZW58MXx8fHwxNzcyNzQ3NzkxfDA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral"
+            <img loading="lazy" decoding="async"
+              src="https://images.unsplash.com/photo-1522168709594-942fcde3d332?crop=entropy&cs=tinysrgb&fit=max&auto=format&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHx0cmFkaXRpb25hbCUyMEFmcmljYW4lMjBkcnVtcyUyMHBlcmN1c3Npb258ZW58MXx8fHwxNzcyNzQ3NzkxfDA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral"
               alt="Traditional percussion instruments"
               className="w-full h-80 object-cover"
             />
@@ -323,8 +323,8 @@ const Music = () => {
           viewport={{ once: true }}
           className="rounded-2xl overflow-hidden shadow-2xl max-w-5xl mx-auto"
         >
-          <img
-            src="https://images.unsplash.com/photo-1764145144753-922ae256714b?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxFdGhpb3BpYW4lMjBjdWx0dXJhbCUyMGNlbGVicmF0aW9uJTIwbXVzaWMlMjBkYW5jZXxlbnwxfHx8fDE3NzI3NDc3OTF8MA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral"
+          <img loading="lazy" decoding="async"
+            src="https://images.unsplash.com/photo-1764145144753-922ae256714b?crop=entropy&cs=tinysrgb&fit=max&auto=format&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxFdGhpb3BpYW4lMjBjdWx0dXJhbCUyMGNlbGVicmF0aW9uJTIwbXVzaWMlMjBkYW5jZXxlbnwxfHx8fDE3NzI3NDc3OTF8MA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral"
             alt="Wolaita cultural music performance"
             className="w-full h-96 object-cover"
           />
