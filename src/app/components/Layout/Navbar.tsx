@@ -29,6 +29,7 @@ type DropdownConfig = {
   main?: NavLink;
   sections: DropdownSection[];
   width?: string;
+  align?: 'left' | 'right';
 };
 
 const kingsLinks: NavLink[] = [
@@ -73,7 +74,7 @@ const languageSections: DropdownSection[] = [
 ];
 
 const linkClass = (isActive: boolean) =>
-  `text-sm font-medium transition-colors hover:text-orange-700 dark:hover:text-orange-300 ${
+  `whitespace-nowrap text-sm font-medium transition-colors hover:text-orange-700 dark:hover:text-orange-300 ${
     isActive ? 'text-orange-800 dark:text-orange-200 font-semibold' : 'text-stone-600 dark:text-stone-300'
   }`;
 
@@ -95,8 +96,18 @@ const Dropdown = ({
     className="relative"
     onMouseEnter={() => onOpenChange(true)}
     onMouseLeave={() => onOpenChange(false)}
+    onKeyDown={(e) => e.key === 'Escape' && onOpenChange(false)}
+    onBlur={(e) => {
+      if (!e.currentTarget.contains(e.relatedTarget as Node | null)) onOpenChange(false);
+    }}
   >
-    <button className={`flex items-center gap-1 ${linkClass(isActive)}`} type="button">
+    <button
+      className={`flex items-center gap-1 ${linkClass(isActive)}`}
+      type="button"
+      aria-haspopup="true"
+      aria-expanded={isOpen}
+      onClick={() => onOpenChange(!isOpen)}
+    >
       {config.label}
       <ChevronDown size={16} className={`transition-transform ${isOpen ? 'rotate-180' : ''}`} />
     </button>
@@ -108,8 +119,10 @@ const Dropdown = ({
           animate={{ opacity: 1, y: 0 }}
           exit={{ opacity: 0, y: -10 }}
           transition={{ duration: 0.2 }}
-          className={`absolute top-full left-0 z-50 mt-2 max-h-96 overflow-y-auto rounded-lg border border-stone-200 bg-white py-2 shadow-xl dark:border-stone-700 dark:bg-stone-800 ${config.width ?? 'w-72'}`}
+          // Top padding (not margin) bridges the gap so the menu stays open while the pointer moves onto it.
+          className={`absolute top-full z-50 pt-2 ${config.align === 'right' ? 'right-0' : 'left-0'} ${config.width ?? 'w-72'}`}
         >
+          <div className="max-h-[70vh] overflow-y-auto rounded-lg border border-stone-200 bg-white py-2 shadow-xl dark:border-stone-700 dark:bg-stone-800">
           {config.main && (
             <Link
               to={config.main.path}
@@ -150,6 +163,7 @@ const Dropdown = ({
               })}
             </div>
           ))}
+          </div>
         </motion.div>
       )}
     </AnimatePresence>
@@ -233,6 +247,14 @@ const Navbar = () => {
     { name: t('nav.gallery'), path: '/gallery' },
   ];
 
+  // The desktop bar shows the core pages directly; the rest live in the "Explore" menu so the row fits.
+  const primaryLinks = navLinks.slice(1, 4);
+  const exploreLinks: NavLink[] = [
+    ...navLinks.slice(4),
+    { name: 'Quiz', path: '/quiz', description: 'Test your knowledge' },
+    { name: 'About', path: '/about', description: 'About the museum' },
+  ];
+
   const dropdowns: DropdownConfig[] = [
     {
       label: 'Kings',
@@ -260,6 +282,14 @@ const Navbar = () => {
       main: { name: 'Language Overview', path: '/language', description: 'Wolaitigna language & writing' },
       sections: languageSections,
     },
+    {
+      label: 'Explore',
+      basePath: '/explore',
+      activePaths: exploreLinks.map((link) => link.path),
+      sections: [{ links: exploreLinks }],
+      width: 'w-60',
+      align: 'right',
+    },
   ];
 
   return (
@@ -278,13 +308,17 @@ const Navbar = () => {
         }`}
       />
 
-      <div className="container mx-auto flex items-center justify-between px-6">
-        <Link to="/" className="flex items-center" aria-label="Wolaita Museum home">
-          <WolaitaLogo className="h-12 w-auto object-contain md:h-14" />
+      <div className="mx-auto flex w-full max-w-[1600px] items-center justify-between gap-6 px-4 sm:px-6">
+        <Link to="/" className="flex shrink-0 items-center" aria-label="Wolaita Museum home">
+          <WolaitaLogo className="h-10 w-auto object-contain sm:h-12 md:h-14" />
         </Link>
 
-        <div className="hidden items-center space-x-8 md:flex">
-          {navLinks.map((link) => (
+        <div className="hidden items-center gap-5 xl:flex 2xl:gap-7">
+          <Link to="/" className={`hidden 2xl:inline ${linkClass(location.pathname === '/')}`}>
+            {navLinks[0].name}
+          </Link>
+
+          {primaryLinks.map((link) => (
             <Link key={link.path} to={link.path} className={linkClass(location.pathname === link.path)}>
               {link.name}
             </Link>
@@ -299,14 +333,12 @@ const Navbar = () => {
               isActive={dropdown.activePaths.includes(location.pathname)}
             />
           ))}
+        </div>
 
-          <Link to="/about" className={linkClass(location.pathname === '/about')}>
-            About
-          </Link>
-
+        <div className="hidden shrink-0 items-center gap-3 xl:flex">
           <Link
             to="/quiz"
-            className={`flex items-center gap-1.5 rounded-full border-2 px-3.5 py-1.5 text-sm font-medium transition-colors ${
+            className={`hidden items-center gap-1.5 whitespace-nowrap rounded-full border-2 px-3.5 py-1.5 text-sm font-medium transition-colors 2xl:flex ${
               location.pathname === '/quiz'
                 ? 'border-amber-700 bg-amber-700 text-white'
                 : 'border-amber-500 text-amber-700 hover:bg-amber-50 dark:text-amber-400 dark:hover:bg-amber-900/20'
@@ -320,15 +352,17 @@ const Navbar = () => {
 
           <Link
             to="/contact"
-            className="rounded-full bg-orange-800 px-5 py-2 text-sm font-medium text-white transition-colors hover:bg-orange-900"
+            className="whitespace-nowrap rounded-full bg-orange-800 px-5 py-2 text-sm font-medium text-white transition-colors hover:bg-orange-900"
           >
             Contact
           </Link>
         </div>
 
-        <div className="flex items-center gap-4 md:hidden">
+        <div className="flex shrink-0 items-center gap-2 sm:gap-4 xl:hidden">
           <LanguageSelector />
-          <ThemeToggle />
+          <div className="hidden sm:block">
+            <ThemeToggle />
+          </div>
           <button
             onClick={() => setIsOpen((open) => !open)}
             className="p-2 text-stone-800 dark:text-stone-100"
@@ -347,9 +381,14 @@ const Navbar = () => {
             initial={{ opacity: 0, height: 0 }}
             animate={{ opacity: 1, height: 'auto' }}
             exit={{ opacity: 0, height: 0 }}
-            className="overflow-hidden border-t border-stone-200 bg-stone-50 dark:border-stone-800 dark:bg-stone-900 md:hidden"
+            className="overflow-hidden border-t border-stone-200 bg-stone-50 dark:border-stone-800 dark:bg-stone-900 xl:hidden"
           >
-            <div className="flex flex-col space-y-6 px-6 py-8">
+            <div className="flex max-h-[calc(100dvh-7rem)] flex-col space-y-6 overflow-y-auto overscroll-contain px-6 py-8">
+              <div className="flex items-center justify-between sm:hidden">
+                <span className="text-sm font-medium text-stone-600 dark:text-stone-400">Theme</span>
+                <ThemeToggle />
+              </div>
+
               {navLinks.map((link) => (
                 <Link
                   key={link.path}
