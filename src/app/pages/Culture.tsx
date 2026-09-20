@@ -1,4 +1,5 @@
 import React from 'react';
+import PhotoPlaceholder from '../components/ui/PhotoPlaceholder';
 import { Helmet } from 'react-helmet-async';
 import Section from '../components/ui/Section';
 import PageHero from '../components/ui/PageHero';
@@ -23,8 +24,6 @@ const Culture = () => {
         title={t('culture.title')}
         subtitle={t('culture.subtitle')}
         badge="Daily Life & Traditions"
-        image="https://images.unsplash.com/photo-1598122666068-59b41e0a3193?crop=entropy&cs=tinysrgb&fit=max&auto=format&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxFdGhpb3BpYW4lMjBwZW9wbGUlMjB0cmFkaXRpb25hbCUyMGNsb3RoaW5nJTIwcG9ydHJhaXR8ZW58MXx8fHwxNzcxMzY4NTA0fDA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral"
-        imageAlt="Wolaita cultural traditions"
       />
 
       <Section>
@@ -34,11 +33,7 @@ const Culture = () => {
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
           >
-            <img loading="lazy" decoding="async" 
-              src="https://images.unsplash.com/photo-1598122666068-59b41e0a3193?crop=entropy&cs=tinysrgb&fit=max&auto=format&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxFdGhpb3BpYW4lMjBwZW9wbGUlMjB0cmFkaXRpb25hbCUyMGNsb3RoaW5nJTIwcG9ydHJhaXR8ZW58MXx8fHwxNzcxMzY4NTA0fDA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral"
-              alt="Traditional Clothing"
-              className="rounded-lg shadow-xl w-full h-auto object-cover"
-            />
+            <PhotoPlaceholder label="Traditional Clothing" className="rounded-lg shadow-xl w-full h-auto object-cover" />
           </motion.div>
           <div className="space-y-6">
             <h2 className="text-3xl font-serif font-bold text-stone-900 dark:text-stone-100">Traditional Clothing</h2>
@@ -67,11 +62,7 @@ const Culture = () => {
             viewport={{ once: true }}
             className="order-1 lg:order-2"
           >
-            <img loading="lazy" decoding="async" 
-              src="https://images.unsplash.com/photo-1770562325764-694b655db57e?crop=entropy&cs=tinysrgb&fit=max&auto=format&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxFdGhpb3BpYW4lMjB2aWxsYWdlJTIwdHJhZGl0aW9uYWwlMjBodXR8ZW58MXx8fHwxNzcxMzY4NTA0fDA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral"
-              alt="Community Life"
-              className="rounded-lg shadow-xl w-full h-auto object-cover"
-            />
+            <PhotoPlaceholder label="Community Life" className="rounded-lg shadow-xl w-full h-auto object-cover" />
           </motion.div>
         </div>
 

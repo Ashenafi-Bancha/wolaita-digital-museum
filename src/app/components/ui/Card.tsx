@@ -1,4 +1,5 @@
 import type { FC } from 'react';
+import PhotoPlaceholder from './PhotoPlaceholder';
 import { Link } from 'react-router';
 import { motion } from 'motion/react';
 import { ArrowRight } from 'lucide-react';
@@ -23,11 +24,17 @@ const Card: FC<CardProps> = ({ title, image, excerpt, link, delay = 0 }) => {
       className="group content-card-3d overflow-hidden"
     >
       <div className="relative h-64 overflow-hidden">
-        <img loading="lazy" decoding="async"
-          src={image}
-          alt={title}
-          className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-105"
-        />
+        {image ? (
+          <img
+            loading="lazy"
+            decoding="async"
+            src={image}
+            alt={title}
+            className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-105"
+          />
+        ) : (
+          <PhotoPlaceholder label={title} className="h-full w-full" />
+        )}
         <div className="absolute inset-0 bg-gradient-to-t from-stone-950/70 via-stone-950/20 to-transparent" />
         <DingguazaStripe
           segmentWidth={6}

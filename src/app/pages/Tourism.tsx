@@ -19,8 +19,6 @@ const Tourism = () => {
         title={t('visit.title')}
         subtitle={t('visit.subtitle')}
         badge="Plan Your Visit"
-        image="https://images.unsplash.com/photo-1761844382959-08cadeb14f41?crop=entropy&cs=tinysrgb&fit=max&auto=format&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxFdGhpb3BpYW4lMjBsYW5kc2NhcGUlMjBtb3VudGFpbiUyMHZhbGxleXxlbnwxfHx8fDE3NzEzNjg1MDR8MA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral"
-        imageAlt="Wolaita highland landscape"
       />
 
       <Section>

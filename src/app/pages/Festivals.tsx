@@ -1,4 +1,5 @@
 import React from 'react';
+import PhotoPlaceholder from '../components/ui/PhotoPlaceholder';
 import { Helmet } from 'react-helmet-async';
 import Section from '../components/ui/Section';
 import PageHero from '../components/ui/PageHero';
@@ -18,8 +19,6 @@ const Festivals = () => {
         title={t('festivals.title')}
         subtitle={t('festivals.subtitle')}
         badge="Celebrations"
-        image="https://images.unsplash.com/photo-1764145162259-04eaf2b3d86a?crop=entropy&cs=tinysrgb&fit=max&auto=format&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxFdGhpb3BpYW4lMjB0cmFkaXRpb25hbCUyMGRhbmNlJTIwY2VsZWJyYXRpb258ZW58MXx8fHwxNzcxMzY4NTA0fDA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral"
-        imageAlt="Wolaita festival celebration"
       />
 
       <Section>
@@ -32,11 +31,7 @@ const Festivals = () => {
           >
             <div className="md:flex">
               <div className="md:w-1/2 h-64 md:h-auto">
-                <img loading="lazy" decoding="async" 
-                  src="https://images.unsplash.com/photo-1743404025748-31f5d74a8702?crop=entropy&cs=tinysrgb&fit=max&auto=format&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxFdGhpb3BpYW4lMjB0cmFkaXRpb25hbCUyMHdlYXZpbmclMjBwYXR0ZXJuc3xlbnwxfHx8fDE3NzEzNjg1MDR8MA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral" 
-                  alt="Gifata Celebration" 
-                  className="w-full h-full object-cover"
-                />
+                <PhotoPlaceholder label="Gifata Celebration" className="w-full h-full object-cover" />
               </div>
               <div className="p-5 sm:p-8 md:w-1/2 flex flex-col justify-center">
                 <h2 className="text-3xl font-serif font-bold text-orange-700 dark:text-orange-400 mb-4">Gifata (New Year)</h2>
@@ -58,11 +53,7 @@ const Festivals = () => {
           >
             <div className="md:flex flex-row-reverse">
               <div className="md:w-1/2 h-64 md:h-auto">
-                <img loading="lazy" decoding="async" 
-                  src="https://images.unsplash.com/photo-1576073383046-eaf2c135314d?crop=entropy&cs=tinysrgb&fit=max&auto=format&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxFdGhpb3BpYW4lMjBjb2ZmZWUlMjBjZXJlbW9ueSUyMHRyYWRpdGlvbmFsfGVufDF8fHx8MTc3MTM2ODUwNHww&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral" 
-                  alt="Coffee Ceremony" 
-                  className="w-full h-full object-cover"
-                />
+                <PhotoPlaceholder label="Coffee Ceremony" className="w-full h-full object-cover" />
               </div>
               <div className="p-5 sm:p-8 md:w-1/2 flex flex-col justify-center">
                 <h2 className="text-3xl font-serif font-bold text-orange-700 dark:text-orange-400 mb-4">Meskel</h2>

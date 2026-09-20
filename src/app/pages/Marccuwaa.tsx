@@ -5,7 +5,7 @@ import { motion } from 'motion/react';
 import { Coins, TrendingUp, Users, Scale, Crown, Landmark, ShieldCheck, Sparkles, BadgeCheck } from 'lucide-react';
 import { useLanguage } from '../context/LanguageContext';
 
-// Import authentic Marccuwaa currency images
+// Illustrations of Marccuwaa (not photographs of documented specimens)
 import marccuwaaIronBars from 'figma:asset/d68f533a46e1f46727cb03fe255ee67d84d38637.webp';
 import marccuwaa3DRender from 'figma:asset/7fe72f375854321789c8355029c9ea0903352cfd.png';
 
@@ -249,12 +249,12 @@ const Marccuwaa = () => {
             {/* Key Facts */}
             <div className="mt-8 grid grid-cols-2 gap-4">
               <div className="bg-gradient-to-br from-yellow-50 to-orange-50 dark:from-yellow-900/20 dark:to-orange-900/20 p-5 rounded-xl border-2 border-yellow-300 dark:border-yellow-700">
-                <div className="text-2xl font-bold text-orange-600 dark:text-orange-400 mb-1">5-7</div>
-                <div className="text-sm text-stone-700 dark:text-stone-300">Bars per Bundle</div>
+                <div className="text-2xl font-bold text-orange-600 dark:text-orange-400 mb-1">Several</div>
+                <div className="text-sm text-stone-700 dark:text-stone-300">Bars per bundle</div>
               </div>
               <div className="bg-gradient-to-br from-orange-50 to-red-50 dark:from-orange-900/20 dark:to-red-900/20 p-5 rounded-xl border-2 border-orange-300 dark:border-orange-700">
-                <div className="text-2xl font-bold text-red-600 dark:text-red-400 mb-1">~1kg</div>
-                <div className="text-sm text-stone-700 dark:text-stone-300">Standard Weight</div>
+                <div className="text-2xl font-bold text-red-600 dark:text-red-400 mb-1">By weight</div>
+                <div className="text-sm text-stone-700 dark:text-stone-300">Value judged</div>
               </div>
             </div>
           </motion.div>
@@ -285,10 +285,10 @@ const Marccuwaa = () => {
               <div className="absolute bottom-4 left-4 right-4 bg-white/95 dark:bg-stone-900/95 backdrop-blur-sm rounded-2xl p-4 shadow-lg border border-stone-200 dark:border-stone-700">
                 <div className="flex items-center gap-2 text-orange-600 dark:text-orange-400 mb-1">
                   <ShieldCheck size={16} />
-                  <div className="text-xs font-bold tracking-wide">AUTHENTICATED SPECIMEN</div>
+                  <div className="text-xs font-bold tracking-wide">ILLUSTRATION</div>
                 </div>
                 <div className="text-sm font-bold text-stone-900 dark:text-stone-100">Wolaita Kingdom Currency</div>
-                <div className="text-xs text-stone-600 dark:text-stone-400">Pre-1894 | Royal Mint</div>
+                <div className="text-xs text-stone-600 dark:text-stone-400">Artist’s rendering · not a museum specimen</div>
               </div>
             </div>
           </motion.div>
@@ -319,9 +319,9 @@ const Marccuwaa = () => {
               <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/80 to-transparent p-6 text-white">
                 <div className="flex items-center gap-2 mb-2">
                   <BadgeCheck size={20} className="text-yellow-400" />
-                  <span className="text-sm font-bold tracking-wide">HISTORICAL ARTIFACT</span>
+                  <span className="text-sm font-bold tracking-wide">ILLUSTRATION</span>
                 </div>
-                <p className="text-xs text-stone-200">Original Marccuwaa iron bars from the Wolaita Kingdom era</p>
+                <p className="text-xs text-stone-200">Illustration of Marccuwaa iron bars — photographs of documented specimens are being sought</p>
               </div>
 
               {/* Decorative frame corners */}
@@ -341,40 +341,40 @@ const Marccuwaa = () => {
           >
             <div className="inline-flex items-center gap-2 bg-red-100 dark:bg-red-900/30 rounded-full px-4 py-2 mb-6">
               <Crown className="text-red-600 dark:text-red-400" size={20} />
-              <span className="text-red-700 dark:text-red-300 font-semibold text-sm">ORIGINAL ARTIFACT</span>
+              <span className="text-red-700 dark:text-red-300 font-semibold text-sm">WHAT THE BARS LOOKED LIKE</span>
             </div>
 
             <h2 className="text-3xl md:text-4xl lg:text-5xl font-serif font-bold text-stone-900 dark:text-stone-100 mb-6">
-              The Original Marccuwaa
+              The Form of Marccuwaa
             </h2>
 
             <div className="space-y-5 text-stone-700 dark:text-stone-300">
               <p className="text-lg leading-relaxed">
-                These are the <span className="font-bold text-orange-600 dark:text-orange-400">authentic iron currency bars</span> that 
-                once circulated throughout the Wolaita Kingdom. Each bar was meticulously crafted to standardized specifications, 
-                ensuring consistent value and facilitating fair trade across the realm.
+                Marccuwaa took the form of <span className="font-bold text-orange-600 dark:text-orange-400">iron bars</span> that
+                circulated throughout the Wolaita Kingdom. Accounts describe bars worked to consistent specifications, so that
+                value could be judged by weight and quality in trade across the realm.
               </p>
 
               <p className="text-lg leading-relaxed">
-                Notice the distinctive <span className="font-semibold text-yellow-600 dark:text-yellow-400">curved shape at the ends</span> — 
-                this design feature served both practical and security purposes. The bars could be easily stacked, 
-                transported, and authenticated by royal officials and merchants.
+                The bars are described with a <span className="font-semibold text-yellow-600 dark:text-yellow-400">curved shape at the ends</span>,
+                a feature said to serve both practical and security purposes: the bars could be stacked, carried, and checked by
+                officials and merchants.
               </p>
 
               <p className="text-lg leading-relaxed">
-                The <span className="font-semibold">multiple bars bundled together</span> represent a common trading unit. 
-                Merchants would carry bundles of 5-7 bars for larger transactions, while individual bars served 
-                for smaller purchases in local markets.
+                <span className="font-semibold">Bundles of several bars</span> are remembered as a common trading unit for larger
+                transactions, with single bars used for smaller purchases in local markets. The exact counts and weights are still
+                being confirmed with elders and historians.
               </p>
 
               <div className="bg-white dark:bg-stone-800 rounded-2xl p-6 shadow-lg border-2 border-orange-300 dark:border-orange-700 mt-6">
                 <div className="flex items-start gap-3">
                   <Scale className="text-orange-600 dark:text-orange-400 mt-1 shrink-0" size={24} />
                   <div>
-                    <h4 className="font-bold text-stone-900 dark:text-stone-100 mb-2">Physical Evidence of Sovereignty</h4>
+                    <h4 className="font-bold text-stone-900 dark:text-stone-100 mb-2">A Currency of Its Own</h4>
                     <p className="text-sm text-stone-600 dark:text-stone-400 leading-relaxed">
-                      These artifacts prove that Wolaita operated as a sophisticated kingdom with its own monetary 
-                      system, predating European colonial influence in the region.
+                      Wolaita is remembered as having its own medium of exchange before its incorporation into the
+                      Ethiopian Empire in 1894. Documentation of surviving specimens is being gathered.
                     </p>
                   </div>
                 </div>

@@ -9,9 +9,6 @@ import { ROYAL_LINE } from '../data/kings';
 const Kings = () => {
   const { t } = useLanguage();
 
-  // Golden King Statue background image
-  const goldenKingStatue = "https://images.unsplash.com/photo-1614981816670-3e65f4cfdb28?crop=entropy&cs=tinysrgb&fit=max&auto=format&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxnb2xkZW4lMjB3YXJyaW9yJTIwc3RhdHVlJTIwaG9yc2ViYWNrJTIwZXRoaW9waWFuJTIwaGVyaXRhZ2V8ZW58MXx8fHwxNzc1MTA5MjMwfDA&ixlib=rb-4.1.0&q=80&w=1080";
-
   return (
     <>
       <Helmet>
@@ -20,13 +17,7 @@ const Kings = () => {
       </Helmet>
 
       {/* Hero Section with Golden King Statue as Background */}
-      <div className="relative overflow-hidden min-h-[520px] sm:min-h-[600px] md:min-h-[700px]">
-        {/* Golden King Statue Background Image - Clearly Visible */}
-        <div 
-          className="absolute inset-0 bg-cover bg-center bg-no-repeat"
-          style={{ backgroundImage: `url(${goldenKingStatue})` }}
-        >
-        </div>
+      <div className="relative overflow-hidden bg-gradient-to-br from-stone-900 via-stone-950 to-red-950 min-h-[520px] sm:min-h-[600px] md:min-h-[700px]">
 
         <div className="container mx-auto px-4 sm:px-6 py-20 md:py-32 relative z-10">
           <div className="max-w-4xl mx-auto text-center">

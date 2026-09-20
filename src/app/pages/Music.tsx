@@ -1,4 +1,5 @@
 import React from 'react';
+import PhotoPlaceholder from '../components/ui/PhotoPlaceholder';
 import { Helmet } from 'react-helmet-async';
 import Section from '../components/ui/Section';
 import PageHero from '../components/ui/PageHero';
@@ -54,12 +55,6 @@ const Music = () => {
   ];
 
   const notableMusicians = [
-    {
-      name: "Alemayehu Eshete (The Ethiopian Elvis)",
-      era: "1960s-Present",
-      contribution: "Pioneer of modern Ethiopian music who popularized Wolaita traditional melodies in urban settings.",
-      specialty: "Cultural fusion music"
-    },
     {
       name: "Wolaita Traditional Music Ensemble",
       era: "Various generations",
@@ -131,8 +126,6 @@ const Music = () => {
         title={t('music.title')}
         subtitle={t('music.subtitle')}
         badge="Traditional Melodies"
-        image="https://images.unsplash.com/photo-1770223625592-3483e07645f5?crop=entropy&cs=tinysrgb&fit=max&auto=format&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxFdGhpb3BpYW4lMjB0cmFkaXRpb25hbCUyMG11c2ljaWFucyUyMHBlcmZvcm1pbmd8ZW58MXx8fHwxNzcyNzQ3NzkwfDA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral"
-        imageAlt="Wolaita musicians performing"
       />
 
       {/* Introduction */}
@@ -248,11 +241,7 @@ const Music = () => {
             viewport={{ once: true }}
             className="rounded-xl overflow-hidden shadow-xl"
           >
-            <img loading="lazy" decoding="async"
-              src="https://images.unsplash.com/photo-1764670085286-55cd79507a72?crop=entropy&cs=tinysrgb&fit=max&auto=format&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxBZnJpY2FuJTIwdHJhZGl0aW9uYWwlMjBtdXNpYyUyMGluc3RydW1lbnRzfGVufDF8fHx8MTc3Mjc0Nzc5MHww&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral"
-              alt="Traditional Wolaita instruments"
-              className="w-full h-80 object-cover"
-            />
+            <PhotoPlaceholder label="Traditional Wolaita instruments" className="w-full h-80 object-cover" />
           </motion.div>
           <motion.div
             initial={{ opacity: 0, scale: 0.95 }}
@@ -261,11 +250,7 @@ const Music = () => {
             transition={{ delay: 0.2 }}
             className="rounded-xl overflow-hidden shadow-xl"
           >
-            <img loading="lazy" decoding="async"
-              src="https://images.unsplash.com/photo-1522168709594-942fcde3d332?crop=entropy&cs=tinysrgb&fit=max&auto=format&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHx0cmFkaXRpb25hbCUyMEFmcmljYW4lMjBkcnVtcyUyMHBlcmN1c3Npb258ZW58MXx8fHwxNzcyNzQ3NzkxfDA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral"
-              alt="Traditional percussion instruments"
-              className="w-full h-80 object-cover"
-            />
+            <PhotoPlaceholder label="Traditional percussion instruments" className="w-full h-80 object-cover" />
           </motion.div>
         </div>
       </Section>
@@ -323,11 +308,7 @@ const Music = () => {
           viewport={{ once: true }}
           className="rounded-2xl overflow-hidden shadow-2xl max-w-5xl mx-auto"
         >
-          <img loading="lazy" decoding="async"
-            src="https://images.unsplash.com/photo-1764145144753-922ae256714b?crop=entropy&cs=tinysrgb&fit=max&auto=format&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxFdGhpb3BpYW4lMjBjdWx0dXJhbCUyMGNlbGVicmF0aW9uJTIwbXVzaWMlMjBkYW5jZXxlbnwxfHx8fDE3NzI3NDc3OTF8MA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral"
-            alt="Wolaita cultural music performance"
-            className="w-full h-96 object-cover"
-          />
+          <PhotoPlaceholder label="Wolaita cultural music performance" className="w-full h-96 object-cover" />
         </motion.div>
         <p className="text-center text-stone-600 dark:text-stone-400 mt-6 italic">
           Music and dance are inseparable in Wolaita culture, creating a complete cultural experience

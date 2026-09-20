@@ -51,10 +51,10 @@ const ALL_QUESTIONS: Question[] = [
   },
   {
     id: 5, category: 'history', type: 'true-false', difficulty: 'medium',
-    question: 'The Wolaita Zone is located in the Southern Nations, Nationalities, and Peoples\' Region (SNNPR) of Ethiopia.',
+    question: 'Wolaita Zone is part of the South Ethiopia Region.',
     options: ['True', 'False', 'Partially True', 'Unknown'],
     correct: 0,
-    explanation: 'True. Wolaita Zone is indeed located in the SNNPR of Ethiopia, with Wolaita Sodo as its administrative capital.'
+    explanation: 'True. After the former SNNPR was reorganised, Wolaita Zone became part of the South Ethiopia Region, with Wolaita Sodo as its administrative capital.'
   },
   {
     id: 6, category: 'history', type: 'multiple-choice', difficulty: 'medium',
@@ -290,35 +290,6 @@ const ALL_QUESTIONS: Question[] = [
   },
 
   // HERITAGE SITES (IMAGE-BASED)
-  {
-    id: 34, category: 'heritage', type: 'image-identify', difficulty: 'medium',
-    question: 'This sacred lake is one of Wolaita\'s most important heritage sites, known for its spiritual significance and biodiversity. What is it?',
-    image: 'https://images.unsplash.com/photo-1547036967-23d11aacaee0?w=600&h=400&fit=crop&auto=format',
-    imageAlt: 'Scenic lake surrounded by lush green hills in Ethiopian highlands',
-    options: ['Lake Hawassa', 'Lake Abaya', 'Lake Abbijata', 'Lake Langano'],
-    correct: 1,
-    explanation: 'Lake Abaya (also called Lake Abijata locally) is a major heritage site near Wolaita, revered for its ecological importance and spiritual significance to local communities. Its dark waters are home to diverse wildlife.'
-  },
-  {
-    id: 35, category: 'heritage', type: 'image-identify', difficulty: 'easy',
-    question: 'This traditional woven cloth with black, yellow and red patterns is the most iconic symbol of Wolaita identity. Name it.',
-    image: 'https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=600&h=400&fit=crop&auto=format',
-    imageAlt: 'Colorful woven fabric with geometric patterns in warm earth tones',
-    options: ['Shemma', 'Gabi', 'Dingguza', 'Netela'],
-    correct: 2,
-    explanation: 'Dingguza is the iconic traditional woven cotton cloth of the Wolaita people. The distinctive black, yellow, and red geometric patterns make it immediately recognizable as a Wolaita cultural artifact.'
-  },
-  {
-    id: 36, category: 'heritage', type: 'image-identify', difficulty: 'hard',
-    question: 'This ancient hill fortress was a strategic stronghold of the Wolaita Kingdom. Identify the site.',
-    image: 'https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=600&h=400&fit=crop&auto=format',
-    imageAlt: 'Rocky hilltop landscape with ancient stone ruins in highland Ethiopia',
-    options: ['Amba Geshen', 'Damota Mountain', 'Tullu Dimtu', 'Konta Fortress'],
-    correct: 1,
-    explanation: 'Damota Mountain (also called Damot) is an iconic landmark in Wolaita, historically serving as a natural fortress and spiritual site. The mountain is central to Wolaita identity and appears in numerous historical accounts of the kingdom\'s power.'
-  },
-
-  // NOTABLE PEOPLE
   {
     id: 37, category: 'history', type: 'multiple-choice', difficulty: 'medium',
     question: 'Who is considered one of the most prominent modern Wolaita political figures who contributed to Ethiopia\'s development?',

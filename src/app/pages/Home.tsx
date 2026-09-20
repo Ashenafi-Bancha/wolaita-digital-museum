@@ -7,6 +7,7 @@ import { useLanguage } from "../context/LanguageContext";
 import mountDamotaImage from "../../assets/Mount_Damot.webp";
 import mountDamotaImageSmall from "../../assets/Mount_Damot-960.webp";
 import { SITE_URL } from "../config/site";
+import PhotoPlaceholder from "../components/ui/PhotoPlaceholder";
 
 const stats = [
   { value: "50+", labelKey: "home.mightyKings" as const },
@@ -22,24 +23,21 @@ const Home = () => {
     {
       title: t("home.kingsHighlight"),
       excerpt: t("home.kingsExcerpt"),
-      image:
-        "https://images.unsplash.com/photo-1708512935636-36a3dba7cfc4?w=600&h=400&fit=crop&auto=format",
+      image: "",
       link: "/kings",
       badge: "Royal lineage",
     },
     {
       title: t("home.languageHighlight"),
       excerpt: t("home.languageExcerpt"),
-      image:
-        "https://images.unsplash.com/photo-1576073383046-eaf2c135314d?w=600&h=400&fit=crop&auto=format",
+      image: "",
       link: "/language",
       badge: "Living language",
     },
     {
       title: t("home.foodHighlight"),
       excerpt: t("home.foodExcerpt"),
-      image:
-        "https://images.unsplash.com/photo-1770562325764-694b655db57e?w=600&h=400&fit=crop&auto=format",
+      image: "",
       link: "/food",
       badge: "Cuisine heritage",
     },
@@ -372,11 +370,15 @@ const Home = () => {
                 <Link to={item.link} className="block">
                   <div className="surface-3d overflow-hidden rounded-2xl bg-white dark:bg-stone-900">
                     <div className="relative h-48 overflow-hidden">
-                      <img loading="lazy" decoding="async"
+                      {item.image ? (
+                        <img loading="lazy" decoding="async"
                         src={item.image}
                         alt={item.title}
                         className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
                       />
+                      ) : (
+                        <PhotoPlaceholder label={item.title} className="h-full w-full" />
+                      )}
                       <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent" />
                       <div className="badge-wolaita absolute left-4 top-4 text-[0.6rem]">
                         {item.badge}

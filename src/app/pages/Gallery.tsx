@@ -75,47 +75,6 @@ const Gallery = () => {
       caption: "Festive presentation — Beautifully arranged Kocho pieces with bold green and red sauces on banana leaf, perfect for celebrations."
     },
 
-    // Existing Unsplash images
-    {
-      src: "https://images.unsplash.com/photo-1761844382959-08cadeb14f41?crop=entropy&cs=tinysrgb&fit=max&auto=format&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxFdGhpb3BpYW4lMjBsYW5kc2NhcGUlMjBtb3VudGFpbiUyMHZhbGxleXxlbnwxfHx8fDE3NzEzNjg1MDR8MA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral",
-      alt: "Wolaita Landscape",
-      caption: "The breathtaking mountains and valleys of the Wolaita region."
-    },
-    {
-      src: "https://images.unsplash.com/photo-1708512935636-36a3dba7cfc4?crop=entropy&cs=tinysrgb&fit=max&auto=format&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxBZnJpY2FuJTIwdHJpYmFsJTIwZHJ1bSUyMG11c2ljJTIwaW5zdHJ1bWVudHxlbnwxfHx8fDE3NzEzNjg1MDR8MA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral",
-      alt: "Traditional Music",
-      caption: "Music and dance are central to cultural expression."
-    },
-    {
-      src: "https://images.unsplash.com/photo-1576073383046-eaf2c135314d?crop=entropy&cs=tinysrgb&fit=max&auto=format&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxFdGhpb3BpYW4lMjBjb2ZmZWUlMjBjZXJlbW9ueSUyMHRyYWRpdGlvbmFsfGVufDF8fHx8MTc3MTM2ODUwNHww&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral",
-      alt: "Coffee Ceremony",
-      caption: "A traditional coffee ceremony in progress."
-    },
-    {
-      src: "https://images.unsplash.com/photo-1764145162259-04eaf2b3d86a?crop=entropy&cs=tinysrgb&fit=max&auto=format&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxFdGhpb3BpYW4lMjB0cmFkaXRpb25hbCUyMGRhbmNlJTIwY2VsZWJyYXRpb258ZW58MXx8fHwxNzcxMzY4NTA0fDA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral",
-      alt: "Cultural Celebration",
-      caption: "Vibrant colors during a festival."
-    },
-    {
-      src: "https://images.unsplash.com/photo-1770562325764-694b655db57e?crop=entropy&cs=tinysrgb&fit=max&auto=format&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxFdGhpb3BpYW4lMjB2aWxsYWdlJTIwdHJhZGl0aW9uYWwlMjBodXR8ZW58MXx8fHwxNzcxMzY4NTA0fDA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral",
-      alt: "Traditional Architecture",
-      caption: "A traditional Wolaita hut (Tukul)."
-    },
-    {
-      src: "https://images.unsplash.com/photo-1765338915553-6e02fe63ff4f?crop=entropy&cs=tinysrgb&fit=max&auto=format&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxFdGhpb3BpYW4lMjBmb29kJTIwaW5qZXJhJTIwdHJhZGl0aW9uYWwlMjBtZWFsfGVufDF8fHx8MTc3MTM2ODUwNHww&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral",
-      alt: "Traditional Food",
-      caption: "A delicious spread of Injera and Wot."
-    },
-    {
-      src: "https://images.unsplash.com/photo-1598122666068-59b41e0a3193?crop=entropy&cs=tinysrgb&fit=max&auto=format&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxFdGhpb3BpYW4lMjBwZW9wbGUlMjB0cmFkaXRpb25hbCUyMGNsb3RoaW5nJTIwcG9ydHJhaXR8ZW58MXx8fHwxNzcxMzY4NTA0fDA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral",
-      alt: "Portrait",
-      caption: "Wearing traditional woven clothing."
-    },
-    {
-      src: "https://images.unsplash.com/photo-1597709324959-38e0ac50bd4b?crop=entropy&cs=tinysrgb&fit=max&auto=format&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxFdGhpb3BpYW4lMjBiYXNrZXQlMjB3ZWF2aW5nJTIwY3JhZnR8ZW58MXx8fHwxNzcxMzY4NTA0fDA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral",
-      alt: "Craftsmanship",
-      caption: "Skilled artisans at work."
-    }
   ];
 
   return (

@@ -17,7 +17,7 @@ const Food = () => {
   const dishes = [
     {
       name: "Injera & Wot",
-      image: "https://images.unsplash.com/photo-1765338915553-6e02fe63ff4f?crop=entropy&cs=tinysrgb&fit=max&auto=format&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxFdGhpb3BpYW4lMjBmb29kJTIwaW5qZXJhJTIwdHJhZGl0aW9uYWwlMjBtZWFsfGVufDF8fHx8MTc3MTM2ODUwNHww&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral",
+      image: "",
       description: "Like much of Ethiopia, Injera (fermented flatbread) is a staple. It is served with various spicy stews (Wot) made from lentils, chickpeas, or meat.",
       category: "Main Dish"
     },
@@ -38,7 +38,7 @@ const Food = () => {
     },
     {
       name: "Bunna (Coffee)",
-      image: "https://images.unsplash.com/photo-1576073383046-eaf2c135314d?crop=entropy&cs=tinysrgb&fit=max&auto=format&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxFdGhpb3BpYW4lMjBjb2ZmZWUlMjBjZXJlbW9ueSUyMHRyYWRpdGlvbmFsfGVufDF8fHx8MTc3MTM2ODUwNHww&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral",
+      image: "",
       description: "The coffee ceremony is an integral part of social life. The process involves roasting green beans, grinding them, and brewing in a clay pot (Jebena). Served with popcorn or traditional snacks.",
       category: "Beverage & Ceremony"
     },
