@@ -1,9 +1,11 @@
 import React, { useState } from 'react';
 import { Helmet } from 'react-helmet-async';
+import { Link } from 'react-router';
 import Section from '../components/ui/Section';
 import { motion } from 'motion/react';
 import { Crown, Shield, Sword, Award, Users, BookOpen } from 'lucide-react';
 import { useLanguage } from '../context/LanguageContext';
+import { ROYAL_LINE } from '../data/kings';
 
 const Kings = () => {
   const { t } = useLanguage();
@@ -360,6 +362,75 @@ const Kings = () => {
             </motion.div>
           ))}
         </div>
+      </Section>
+
+      {/* Complete Royal Line */}
+      <Section className="bg-white dark:bg-stone-800">
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          className="text-center mb-10 md:mb-12"
+        >
+          <h2 className="text-3xl md:text-5xl font-serif font-bold text-stone-900 dark:text-stone-100 mb-4">
+            The Complete Royal Line
+          </h2>
+          <p className="text-stone-600 dark:text-stone-300 text-base sm:text-lg max-w-3xl mx-auto">
+            The succession of Wolaita Kawo from Kawo Bito to Kawo Tona, the last independent monarch.
+            Each name appears in Wolaitigna transliteration and in Amharic. The reign and contribution
+            of every king are being documented and will be added here.
+          </p>
+        </motion.div>
+
+        <ol className="grid grid-cols-1 gap-3 sm:grid-cols-2 lg:grid-cols-3 max-w-6xl mx-auto">
+          {ROYAL_LINE.map((king, index) => (
+            <motion.li
+              key={king.order}
+              initial={{ opacity: 0, y: 12 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, margin: '-40px' }}
+              transition={{ delay: Math.min(index, 12) * 0.03 }}
+              className={`flex items-center gap-3 rounded-xl border-l-4 bg-stone-50 p-3 shadow-sm transition-shadow hover:shadow-md dark:bg-stone-900 sm:p-4 ${
+                king.pending ? 'border-stone-300 dark:border-stone-600' : 'border-yellow-400'
+              }`}
+            >
+              <span
+                className={`flex h-9 w-9 shrink-0 items-center justify-center rounded-full text-sm font-bold ${
+                  king.pending
+                    ? 'bg-stone-200 text-stone-500 dark:bg-stone-800 dark:text-stone-400'
+                    : 'bg-gradient-to-br from-yellow-400 to-red-600 text-white shadow'
+                }`}
+                aria-hidden="true"
+              >
+                {king.order}
+              </span>
+              <span className="min-w-0">
+                <span
+                  className={`block font-serif text-base font-bold leading-snug sm:text-lg ${
+                    king.pending
+                      ? 'italic text-stone-500 dark:text-stone-400'
+                      : 'text-stone-900 dark:text-stone-100'
+                  }`}
+                >
+                  {king.name}
+                </span>
+                {king.amharic && (
+                  <span lang="am" className="block text-sm text-stone-500 dark:text-stone-400">
+                    {king.amharic}
+                  </span>
+                )}
+              </span>
+            </motion.li>
+          ))}
+        </ol>
+
+        <p className="mx-auto mt-8 max-w-3xl rounded-xl border border-yellow-400/40 bg-yellow-50 p-4 text-center text-sm text-stone-700 dark:bg-stone-900 dark:text-stone-300">
+          Know more about any of these kings? Corrections and oral histories from elders are welcome —{' '}
+          <Link to="/contact" className="font-semibold text-orange-800 underline dark:text-yellow-400">
+            share them with us
+          </Link>
+          .
+        </p>
       </Section>
 
       {/* Legacy Section */}
