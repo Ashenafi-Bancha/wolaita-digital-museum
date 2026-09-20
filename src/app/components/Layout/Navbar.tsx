@@ -32,17 +32,6 @@ type DropdownConfig = {
   align?: 'left' | 'right';
 };
 
-const kingsLinks: NavLink[] = [
-  { name: 'Kawo Tona Gaga', path: '/kings#kawo-tona-gaga', era: 'Early 1800s', title: 'The Diplomat' },
-  { name: 'Kawo Kawudana', path: '/kings#kawo-kawudana', era: 'Late 1700s', title: 'The Warrior King' },
-  { name: 'Kawo Sumuro', path: '/kings#kawo-sumuro', era: 'Mid-1800s', title: 'The Builder' },
-  { name: 'Kawo Gichata', path: '/kings#kawo-gichata', era: '1850s-1880s', title: 'The Modernizer' },
-  { name: 'Kawo Toqa (Tona Aura)', path: '/kings#kawo-toqa', era: 'Late 1800s-1894', title: 'Last Independent Monarch' },
-  { name: 'Kawo Gobo', path: '/kings#kawo-gobo', era: '1600s-1700s', title: 'The Law Giver' },
-  { name: 'Kawo Damot', path: '/kings#kawo-damot', era: '1500s-1600s', title: 'The Territorial Expander' },
-  { name: 'Kawo Motolomi', path: '/kings#kawo-motolomi', era: 'Pre-1500s', title: 'The Founding Monarch' },
-];
-
 const visitSections: DropdownSection[] = [
   {
     label: 'Heritage & Culture',
@@ -248,7 +237,7 @@ const Navbar = () => {
   ];
 
   // The desktop bar shows the core pages directly; the rest live in the "Explore" menu so the row fits.
-  const primaryLinks = navLinks.slice(1, 4);
+  const primaryLinks = [...navLinks.slice(1, 4), { name: t('nav.kings'), path: '/kings' }];
   const exploreLinks: NavLink[] = [
     ...navLinks.slice(4),
     { name: 'Quiz', path: '/quiz', description: 'Test your knowledge' },
@@ -256,18 +245,6 @@ const Navbar = () => {
   ];
 
   const dropdowns: DropdownConfig[] = [
-    {
-      label: 'Kings',
-      basePath: '/kings',
-      activePaths: ['/kings'],
-      main: { name: 'View All 50+ Kings', path: '/kings' },
-      sections: [
-        { label: 'Featured', links: [kingsLinks[0]], featured: true },
-        { label: "Near Kawo Tona's Era", links: kingsLinks.slice(1, 5) },
-        { label: 'Earlier Eras', links: kingsLinks.slice(5) },
-      ],
-      width: 'w-64',
-    },
     {
       label: 'Visit',
       basePath: '/tourism',
@@ -399,15 +376,12 @@ const Navbar = () => {
                 </Link>
               ))}
 
-              <MobileSection
-                title="The 50+ Kings"
-                path="/kings"
-                sections={[
-                  { links: [kingsLinks[0]], featured: true },
-                  { links: kingsLinks.slice(1, 5) },
-                  { links: [{ name: 'View all kings ->', path: '/kings' }] },
-                ]}
-              />
+              <Link
+                to="/kings"
+                className="text-lg font-medium text-stone-800 hover:text-orange-700 dark:text-stone-200 dark:hover:text-orange-300"
+              >
+                The 50+ Kings
+              </Link>
 
               <MobileSection title="Visit Wolaita" path="/tourism" sections={visitSections} />
               <MobileSection title="Language & Wisdom" path="/language" sections={languageSections} />

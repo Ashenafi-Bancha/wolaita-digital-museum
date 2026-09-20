@@ -43,32 +43,11 @@ type GameState = 'landing' | 'category' | 'playing' | 'review' | 'results';
 const ALL_QUESTIONS: Question[] = [
   // HISTORY
   {
-    id: 1, category: 'history', type: 'multiple-choice', difficulty: 'medium',
-    question: 'Who was the last independent monarch of the Wolaita Kingdom before annexation?',
-    options: ['Kawo Tona Gaga', 'Kawo Toqa (Tona Aura)', 'Kawo Kawudana', 'Kawo Sumuro'],
-    correct: 1,
-    explanation: 'Kawo Toqa (also known as Tona Aura) was the last independent monarch of Wolaita, reigning until 1894 when Emperor Menelik II annexed the kingdom.'
-  },
-  {
-    id: 2, category: 'history', type: 'multiple-choice', difficulty: 'hard',
-    question: 'Kawo Tona Gaga is historically known as which of the following?',
-    options: ['The Warrior King', 'The Builder', 'The Diplomat', 'The Law Giver'],
-    correct: 2,
-    explanation: 'Kawo Tona Gaga, who reigned in the early 1800s, is celebrated as "The Diplomat" for his remarkable skill in forging alliances and managing relations with neighboring kingdoms.'
-  },
-  {
     id: 3, category: 'history', type: 'multiple-choice', difficulty: 'easy',
     question: 'Approximately how many kings (Kawos) have ruled the Wolaita Kingdom throughout history?',
     options: ['About 20', 'About 35', 'More than 50', 'About 10'],
     correct: 2,
-    explanation: 'Wolaita has a rich royal lineage of more than 50 kings (Kawos), spanning many centuries from the founding monarch Kawo Motolomi to modern times.'
-  },
-  {
-    id: 4, category: 'history', type: 'multiple-choice', difficulty: 'hard',
-    question: 'Which Wolaita king earned the title "The Founding Monarch"?',
-    options: ['Kawo Gobo', 'Kawo Damot', 'Kawo Motolomi', 'Kawo Gichata'],
-    correct: 2,
-    explanation: 'Kawo Motolomi, who reigned in the pre-1500s era, is honored as the Founding Monarch of the Wolaita Kingdom, establishing the royal lineage that would span centuries.'
+    explanation: 'Wolaita has a rich royal lineage of more than 50 kings (Kawos), spanning many centuries from Kawo Bito to Kawo Tona, the last independent monarch.'
   },
   {
     id: 5, category: 'history', type: 'true-false', difficulty: 'medium',
@@ -84,22 +63,6 @@ const ALL_QUESTIONS: Question[] = [
     correct: 1,
     explanation: 'Wolaita Sodo (also spelled Sodo) is the capital city of Wolaita Zone, serving as the political, commercial, and cultural hub of the region.'
   },
-  {
-    id: 7, category: 'history', type: 'multiple-choice', difficulty: 'hard',
-    question: 'Which king was known as "The Modernizer" among Wolaita rulers?',
-    options: ['Kawo Sumuro', 'Kawo Gichata', 'Kawo Gobo', 'Kawo Damot'],
-    correct: 1,
-    explanation: 'Kawo Gichata, who reigned from the 1850s to 1880s, is remembered as "The Modernizer" for introducing new administrative practices and reforms to the Wolaita Kingdom.'
-  },
-  {
-    id: 8, category: 'history', type: 'multiple-choice', difficulty: 'medium',
-    question: 'Kawo Gobo is remembered in Wolaita history as which of the following?',
-    options: ['The Territorial Expander', 'The Law Giver', 'The Builder', 'The Warrior King'],
-    correct: 1,
-    explanation: 'Kawo Gobo, who reigned in the 1600s–1700s, is celebrated as "The Law Giver" for codifying customary laws and establishing governance structures that shaped Wolaita society.'
-  },
-
-  // CULTURE & DAILY LIFE
   {
     id: 9, category: 'culture', type: 'multiple-choice', difficulty: 'easy',
     question: 'What is the traditional house style of the Wolaita people called?',

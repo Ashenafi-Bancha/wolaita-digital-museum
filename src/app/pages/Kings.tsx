@@ -1,133 +1,16 @@
-import React, { useState } from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router';
 import Section from '../components/ui/Section';
 import { motion } from 'motion/react';
-import { Crown, Shield, Sword, Award, Users, BookOpen } from 'lucide-react';
+import { Crown, Award, Users } from 'lucide-react';
 import { useLanguage } from '../context/LanguageContext';
 import { ROYAL_LINE } from '../data/kings';
 
 const Kings = () => {
   const { t } = useLanguage();
-  const [selectedKing, setSelectedKing] = useState<number | null>(null);
 
   // Golden King Statue background image
   const goldenKingStatue = "https://images.unsplash.com/photo-1614981816670-3e65f4cfdb28?crop=entropy&cs=tinysrgb&fit=max&auto=format&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxnb2xkZW4lMjB3YXJyaW9yJTIwc3RhdHVlJTIwaG9yc2ViYWNrJTIwZXRoaW9waWFuJTIwaGVyaXRhZ2V8ZW58MXx8fHwxNzc1MTA5MjMwfDA&ixlib=rb-4.1.0&q=80&w=1080";
-
-  const notableKings = [
-    {
-      name: "Kawo Motolomi",
-      id: "kawo-motolomi",
-      era: "Ancient Period (Pre-1500s)",
-      title: "The Founding Monarch",
-      achievements: [
-        "Established the foundations of the Kawo kingdom",
-        "Created the royal succession system",
-        "Unified various Wolaita clans under one leadership",
-        "Instituted the first administrative structures"
-      ],
-      legacy: "Known as the father of Wolaita monarchy, Kawo Motolomi laid the groundwork for centuries of stable governance. His wisdom in unifying diverse groups created a strong foundation for the kingdom.",
-      symbol: <Crown size={48} />
-    },
-    {
-      name: "Kawo Damot",
-      id: "kawo-damot",
-      era: "Medieval Period (1500s-1600s)",
-      title: "The Territorial Expander",
-      achievements: [
-        "Significantly expanded Wolaita territorial boundaries",
-        "Established diplomatic relations with neighboring kingdoms",
-        "Strengthened military organization and defense systems",
-        "Promoted agricultural development and trade"
-      ],
-      legacy: "Kawo Damot's reign marked the golden age of territorial expansion. He transformed Wolaita into a formidable regional power, commanding respect from all neighboring territories.",
-      symbol: <Shield size={48} />
-    },
-    {
-      name: "Kawo Gobo",
-      id: "kawo-gobo",
-      era: "1600s-1700s",
-      title: "The Law Giver",
-      achievements: [
-        "Codified traditional laws and customs (Wolaita Law)",
-        "Established fair judicial systems across the kingdom",
-        "Created councils of elders for governance",
-        "Promoted education and oral tradition preservation"
-      ],
-      legacy: "Remembered as the greatest legislator in Wolaita history, Kawo Gobo's legal framework continues to influence Wolaita social organization to this day.",
-      symbol: <BookOpen size={48} />
-    },
-    {
-      name: "Kawo Kawudana",
-      id: "kawo-kawudana",
-      era: "Late 1700s",
-      title: "The Warrior King",
-      achievements: [
-        "Successfully defended Wolaita against multiple invasions",
-        "Reformed and modernized the military structure",
-        "Built fortifications throughout the kingdom",
-        "Trained elite warrior units for kingdom defense"
-      ],
-      legacy: "A legendary military strategist, Kawo Kawudana never lost a battle. His tactical brilliance and personal bravery inspired generations of Wolaita warriors.",
-      symbol: <Sword size={48} />
-    },
-    {
-      name: "Kawo Tona Gaga",
-      id: "kawo-tona-gaga",
-      era: "Early 1800s",
-      title: "The Diplomat",
-      achievements: [
-        "Established peace treaties with surrounding kingdoms",
-        "Expanded trade networks across Southern Ethiopia",
-        "Promoted cultural exchange and learning",
-        "Maintained Wolaita independence through skilled diplomacy"
-      ],
-      legacy: "Known for resolving conflicts through wisdom rather than warfare, Kawo Tona Gaga brought unprecedented prosperity and peace to Wolaita through strategic alliances.",
-      symbol: <Users size={48} />
-    },
-    {
-      name: "Kawo Sumuro",
-      id: "kawo-sumuro",
-      era: "Mid-1800s",
-      title: "The Builder",
-      achievements: [
-        "Constructed palaces and administrative centers",
-        "Developed infrastructure including roads and markets",
-        "Established permanent capital in strategic location",
-        "Promoted craftsmanship and architectural innovation"
-      ],
-      legacy: "The physical landscape of Wolaita bears his mark. Many historical structures and settlements trace their origins to Kawo Sumuro's ambitious building programs.",
-      symbol: <Award size={48} />
-    },
-    {
-      name: "Kawo Gichata",
-      id: "kawo-gichata",
-      era: "1850s-1880s",
-      title: "The Modernizer",
-      achievements: [
-        "Introduced new agricultural techniques",
-        "Promoted trade with distant regions",
-        "Strengthened the royal court administration",
-        "Preserved Wolaita independence during turbulent times"
-      ],
-      legacy: "Facing the challenges of a changing world, Kawo Gichata adapted traditional governance while preserving cultural identity, ensuring Wolaita's continued relevance.",
-      symbol: <Crown size={48} />
-    },
-    {
-      name: "Kawo Toqa (Tona Aura)",
-      id: "kawo-toqa",
-      era: "Late 1800s-1894",
-      title: "The Last Independent Monarch",
-      achievements: [
-        "Maintained Wolaita sovereignty for decades",
-        "Led resistance against external pressures",
-        "Preserved Wolaita culture and traditions",
-        "Negotiated terms of incorporation into Ethiopian Empire"
-      ],
-      legacy: "The final king of independent Wolaita, Kawo Toqa fought valiantly to preserve his kingdom's autonomy. Though Wolaita was eventually incorporated into the Ethiopian Empire in 1894, his courage and leadership remain legendary.",
-      symbol: <Shield size={48} />
-    },
-  ];
 
   const royalTraditions = [
     {
@@ -236,7 +119,7 @@ const Kings = () => {
               The Wolaita Kingdom, under the leadership of its Kawo (kings), flourished for over 500 years as an independent state. Each monarch brought unique contributions—military prowess, diplomatic skill, legal innovation, or architectural vision—building upon the legacy of their predecessors.
             </p>
             <p className="text-lg text-stone-700 dark:text-stone-300 leading-relaxed">
-              While historical records name more than 50 kings, detailed accounts survive for the most influential monarchs whose reigns shaped Wolaita's destiny.
+              The names of more than 50 Kawo have been carried down the generations. The reign and contribution of each king are being documented with elders and historians, and will be published here as that work is verified.
             </p>
           </motion.div>
         </div>
@@ -274,91 +157,6 @@ const Kings = () => {
               <p className="text-stone-600 dark:text-stone-300 leading-relaxed">
                 {tradition.description}
               </p>
-            </motion.div>
-          ))}
-        </div>
-      </Section>
-
-      {/* Notable Kings */}
-      <Section className="bg-stone-50 dark:bg-stone-900">
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          className="text-center mb-12"
-        >
-          <h2 className="text-3xl md:text-5xl font-serif font-bold text-stone-900 dark:text-stone-100 mb-4">
-            Notable Monarchs
-          </h2>
-          <p className="text-stone-600 dark:text-stone-300 text-lg max-w-3xl mx-auto">
-            Meet the legendary kings whose wisdom, courage, and vision shaped Wolaita's destiny.
-          </p>
-        </motion.div>
-
-        <div className="space-y-6 max-w-5xl mx-auto">
-          {notableKings.map((king, index) => (
-            <motion.div
-              key={index}
-              id={king.id}
-              initial={{ opacity: 0, x: -20 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              viewport={{ once: true }}
-              transition={{ delay: index * 0.05 }}
-              className="bg-white dark:bg-stone-800 rounded-2xl shadow-lg overflow-hidden border-l-4 border-yellow-400 hover:shadow-2xl transition-all scroll-mt-28"
-            >
-              <div 
-                className="p-6 md:p-8 cursor-pointer"
-                onClick={() => setSelectedKing(selectedKing === index ? null : index)}
-              >
-                <div className="flex items-start gap-6">
-                  <div className="hidden md:block p-4 bg-gradient-to-br from-yellow-400 to-red-500 rounded-xl text-white shadow-lg">
-                    {king.symbol}
-                  </div>
-                  <div className="flex-1">
-                    <div className="flex flex-col md:flex-row md:items-center justify-between mb-2">
-                      <h3 className="text-2xl md:text-3xl font-serif font-bold text-stone-900 dark:text-stone-100">
-                        {king.name}
-                      </h3>
-                      <span className="text-sm bg-red-600 text-white px-3 py-1 rounded-full mt-2 md:mt-0 self-start">
-                        {king.era}
-                      </span>
-                    </div>
-                    <p className="text-lg text-yellow-700 dark:text-yellow-400 font-medium mb-4">
-                      {king.title}
-                    </p>
-
-                    {selectedKing === index && (
-                      <motion.div
-                        initial={{ opacity: 0, height: 0 }}
-                        animate={{ opacity: 1, height: 'auto' }}
-                        exit={{ opacity: 0, height: 0 }}
-                        className="space-y-4"
-                      >
-                        <div>
-                          <h4 className="font-bold text-stone-900 dark:text-stone-100 mb-2">Major Achievements:</h4>
-                          <ul className="list-disc list-inside space-y-1 text-stone-600 dark:text-stone-300">
-                            {king.achievements.map((achievement, i) => (
-                              <li key={i}>{achievement}</li>
-                            ))}
-                          </ul>
-                        </div>
-                        <div className="bg-yellow-50 dark:bg-stone-900 p-4 rounded-lg border-l-4 border-yellow-400">
-                          <h4 className="font-bold text-stone-900 dark:text-stone-100 mb-2">Legacy:</h4>
-                          <p className="text-stone-700 dark:text-stone-300 leading-relaxed">
-                            {king.legacy}
-                          </p>
-                        </div>
-                      </motion.div>
-                    )}
-
-                    <button
-                      className="mt-2 min-h-11 py-2 text-orange-700 dark:text-orange-400 font-medium hover:underline"
-                    >
-                      {selectedKing === index ? 'Show less' : 'Read more about this king →'}
-                    </button>
-                  </div>
-                </div>
-              </div>
             </motion.div>
           ))}
         </div>
