@@ -2,7 +2,7 @@ import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router';
 import Section from '../components/ui/Section';
 import { motion } from 'motion/react';
-import { Crown, Award, Users } from 'lucide-react';
+import { Crown } from 'lucide-react';
 import { useLanguage } from '../context/LanguageContext';
 import { ROYAL_LINE } from '../data/kings';
 
@@ -11,29 +11,6 @@ const Kings = () => {
 
   // Golden King Statue background image
   const goldenKingStatue = "https://images.unsplash.com/photo-1614981816670-3e65f4cfdb28?crop=entropy&cs=tinysrgb&fit=max&auto=format&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxnb2xkZW4lMjB3YXJyaW9yJTIwc3RhdHVlJTIwaG9yc2ViYWNrJTIwZXRoaW9waWFuJTIwaGVyaXRhZ2V8ZW58MXx8fHwxNzc1MTA5MjMwfDA&ixlib=rb-4.1.0&q=80&w=1080";
-
-  const royalTraditions = [
-    {
-      icon: <Crown size={32} />,
-      title: "Sacred Kingship",
-      description: "The Kawo was considered semi-divine, serving as the link between the people and ancestral spirits. Coronation ceremonies involved elaborate rituals."
-    },
-    {
-      icon: <Users size={32} />,
-      title: "Council of Elders",
-      description: "Kings governed with a council of wise elders (Halqa) who advised on laws, disputes, and major decisions, ensuring balanced governance."
-    },
-    {
-      icon: <Award size={32} />,
-      title: "Merit-Based Succession",
-      description: "While hereditary, succession also considered wisdom, courage, and leadership ability, ensuring the most capable heir ascended to the throne."
-    },
-    {
-      icon: <Award size={32} />,
-      title: "Royal Currency (Marccuwaa)",
-      description: "The kingdom minted its own iron bar currency called Marccuwaa, controlled by royal authority for trade, taxation, and economic stability."
-    },
-  ];
 
   return (
     <>
@@ -122,43 +99,6 @@ const Kings = () => {
               The names of more than 50 Kawo have been carried down the generations. The reign and contribution of each king are being documented with elders and historians, and will be published here as that work is verified.
             </p>
           </motion.div>
-        </div>
-      </Section>
-
-      {/* Royal Traditions */}
-      <Section className="bg-white dark:bg-stone-800">
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          className="text-center mb-12"
-        >
-          <h2 className="text-3xl md:text-5xl font-serif font-bold text-stone-900 dark:text-stone-100 mb-4">
-            Royal Traditions
-          </h2>
-        </motion.div>
-
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-          {royalTraditions.map((tradition, index) => (
-            <motion.div
-              key={index}
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ delay: index * 0.1 }}
-              className="bg-gradient-to-br from-yellow-50 to-orange-50 dark:from-stone-900 dark:to-stone-700 p-5 sm:p-8 rounded-xl shadow-lg"
-            >
-              <div className="text-red-600 dark:text-red-400 mb-4">
-                {tradition.icon}
-              </div>
-              <h3 className="text-xl font-serif font-bold text-stone-900 dark:text-stone-100 mb-3">
-                {tradition.title}
-              </h3>
-              <p className="text-stone-600 dark:text-stone-300 leading-relaxed">
-                {tradition.description}
-              </p>
-            </motion.div>
-          ))}
         </div>
       </Section>
 
